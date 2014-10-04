@@ -1,0 +1,22 @@
+﻿@model IEnumerable<HiddenMickeyProject.Data.Area>
+<table>
+    <tr>
+        <th>
+           Area Name
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AreaName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", "Area", new { id = item.AreaId, area = "Editor" }, new { }) |
+            @Html.ActionLink("Details", "Details", "Area", new { id = item.AreaId, area = "Editor" }, new { }) |
+            @Html.ActionLink("Delete", "Delete", "Area", new { id = item.AreaId, area = "Editor" }, new { })
+        </td>
+    </tr>
+}
+</table>

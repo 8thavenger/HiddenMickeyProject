@@ -1,0 +1,6 @@
+D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Debug\HiddenMickeyProject.Data.dll.config
+D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Debug\HiddenMickeyProject.Data.dll
+D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Debug\HiddenMickeyProject.Data.pdb
+D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Debug\MySql.Data.dll
+D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\obj\Debug\HiddenMickeyProject.Data.dll
+D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\obj\Debug\HiddenMickeyProject.Data.pdb

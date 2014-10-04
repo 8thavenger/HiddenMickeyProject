@@ -1,0 +1,21 @@
+﻿@model HiddenMickeyProject.Data.Region
+
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Region</legend>
+
+        @Html.HiddenFor(model => model.RegionId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RegionName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RegionName)
+            @Html.ValidationMessageFor(model => model.RegionName)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>

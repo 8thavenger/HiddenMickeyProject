@@ -61,6 +61,7 @@ namespace HiddenMickeyProject.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<Data.IRegionRepository>().ToProvider(typeof(DI.RepositoryProvider));
         }        
     }
 }

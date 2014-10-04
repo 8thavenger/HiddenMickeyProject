@@ -1,0 +1,27 @@
+﻿@model HiddenMickeyProject.Areas.Editor.Models.RegionModel
+
+@{
+    ViewBag.Title = Model.RegionName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Region</legend>
+
+    <div class="display-label">
+         Region Name
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RegionName)
+    </div>
+
+    
+    @Html.Partial("AreaListPartial", Model.Areas)
+
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.RegionId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

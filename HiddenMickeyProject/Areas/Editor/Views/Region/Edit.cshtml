@@ -1,0 +1,21 @@
+﻿@model HiddenMickeyProject.Data.Region
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Edit","Region",new {Area="Editor"},FormMethod.Post)) {
+    @Html.ValidationSummary(true)
+    @Html.Partial("EditRegion", Model);
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

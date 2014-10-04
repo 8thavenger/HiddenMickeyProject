@@ -140,7 +140,14 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Editor\Controllers\AreaController.cs" />
+    <Compile Include="Areas\Editor\Controllers\EntryController.cs" />
+    <Compile Include="Areas\Editor\Controllers\LocationController.cs" />
+    <Compile Include="Areas\Editor\Controllers\RegionController.cs" />
+    <Compile Include="Areas\Editor\EditorAreaRegistration.cs" />
+    <Compile Include="Areas\Editor\Models\RegionModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DI\RegionRepositoryProvider.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -258,6 +265,14 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="packages.config" />
+    <Content Include="Areas\Editor\Views\Web.config" />
+    <Content Include="Areas\Editor\Views\Region\Index.cshtml" />
+    <Content Include="Areas\Editor\Views\Region\Details.cshtml" />
+    <Content Include="Areas\Editor\Views\Area\Index.cshtml" />
+    <Content Include="Areas\Editor\Views\Shared\AreaListPartial.cshtml" />
+    <Content Include="Areas\Editor\Views\Region\EditRegion.cshtml" />
+    <Content Include="Areas\Editor\Views\Region\Create.cshtml" />
+    <Content Include="Areas\Editor\Views\Region\Edit.cshtml" />
     <None Include="Content\bootstrap-theme.css.map" />
     <None Include="Content\bootstrap.css.map" />
     <None Include="fonts\glyphicons-halflings-regular.eot" />
@@ -268,7 +283,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Editor\Views\Entry\" />
+    <Folder Include="Areas\Editor\Views\Location\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HiddenMickeyProject.Data\HiddenMickeyProject.Data.csproj">
+      <Project>{A30C41B2-EB65-4BCD-B8D9-68511C0198D5}</Project>
+      <Name>HiddenMickeyProject.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
