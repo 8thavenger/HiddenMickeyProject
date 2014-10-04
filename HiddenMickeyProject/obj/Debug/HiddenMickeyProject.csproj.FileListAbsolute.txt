@@ -84,3 +84,5 @@ D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Web.WebPages.
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\obj\Debug\HiddenMickeyProject.csprojResolveAssemblyReference.cache
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\obj\Debug\HiddenMickeyProject.dll
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\obj\Debug\HiddenMickeyProject.pdb
+C:\Users\Kevin\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\HiddenMickeyProject.Data.dll
+C:\Users\Kevin\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\HiddenMickeyProject.Data.pdb

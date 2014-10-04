@@ -275,6 +275,7 @@
     <Content Include="Areas\Editor\Views\Region\Edit.cshtml" />
     <None Include="Content\bootstrap-theme.css.map" />
     <None Include="Content\bootstrap.css.map" />
+    <None Include="Content\Site.css.less" />
     <None Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="fonts\glyphicons-halflings-regular.ttf" />
     <None Include="fonts\glyphicons-halflings-regular.woff" />

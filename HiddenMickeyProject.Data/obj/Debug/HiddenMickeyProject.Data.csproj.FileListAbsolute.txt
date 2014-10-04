@@ -4,3 +4,10 @@ D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Debug\HiddenMic
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Debug\MySql.Data.dll
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\obj\Debug\HiddenMickeyProject.Data.dll
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\obj\Debug\HiddenMickeyProject.Data.pdb
+C:\Users\Kevin\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Debug\HiddenMickeyProject.Data.dll.config
+C:\Users\Kevin\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Debug\HiddenMickeyProject.Data.dll
+C:\Users\Kevin\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Debug\HiddenMickeyProject.Data.pdb
+C:\Users\Kevin\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Debug\MySql.Data.dll
+C:\Users\Kevin\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\obj\Debug\HiddenMickeyProject.Data.csprojResolveAssemblyReference.cache
+C:\Users\Kevin\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\obj\Debug\HiddenMickeyProject.Data.dll
+C:\Users\Kevin\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\obj\Debug\HiddenMickeyProject.Data.pdb
