@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 
 namespace HiddenMickeyProject.Data
 {
-    public class MysqlSource : IRegionRepository
+    public class MysqlSource : INavigationRepository
     {
         string connectionString = string.Empty;
 

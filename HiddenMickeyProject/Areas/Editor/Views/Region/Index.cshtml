@@ -24,9 +24,9 @@
             @Html.DisplayFor(modelItem => item.RegionName)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RegionId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.RegionId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RegionId })
+            @Html.ActionLink("Edit", "Edit", new { regionName = item.RegionName }) |
+            @Html.ActionLink("Details", "Details", new { regionName = item.RegionName }) |
+            @Html.ActionLink("Delete", "Delete", new { regionName = item.RegionName })
         </td>
     </tr>
 }

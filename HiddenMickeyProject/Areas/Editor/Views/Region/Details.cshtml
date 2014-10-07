@@ -1,27 +1,36 @@
-﻿@model HiddenMickeyProject.Areas.Editor.Models.RegionModel
+﻿@using HiddenMickeyProject.Data
+@model HiddenMickeyProject.Models.Navigator
 
 @{
-    ViewBag.Title = Model.RegionName;
+    ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Details</h2>
 
 <fieldset>
-    <legend>Region</legend>
+    <legend>Navigator</legend>
 
     <div class="display-label">
-         Region Name
+         @Html.DisplayNameFor(model => model.RegionName)
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.RegionName)
     </div>
-
-    
-    @Html.Partial("AreaListPartial", Model.Areas)
-
+    <table>
+        <tr><th>Area Name</th><th></th></tr>
+        @foreach (Area item in Model.Areas)
+        {
+            <tr>
+                <td>@item.AreaName</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { Area = "Editor", AreaName = item.AreaName, RegionName = Model.RegionName },null);
+                </td>
+            </tr>
+        }
+    </table>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.RegionId }) |
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

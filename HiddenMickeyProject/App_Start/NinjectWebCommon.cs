@@ -10,6 +10,7 @@ namespace HiddenMickeyProject.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using System.Web.Mvc;
 
     public static class NinjectWebCommon 
     {
@@ -44,7 +45,7 @@ namespace HiddenMickeyProject.App_Start
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
-
+               
                 RegisterServices(kernel);
                 return kernel;
             }
@@ -62,6 +63,8 @@ namespace HiddenMickeyProject.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<Data.IRegionRepository>().ToProvider(typeof(DI.RepositoryProvider));
+            kernel.Bind<Data.INavigationRepository>().ToProvider(typeof(DI.RepositoryProvider));
+            ModelBinders.Binders.Add(typeof(Models.Navigator), new DI.NavigationBinder(kernel.Get<Data.INavigationRepository>()));
         }        
     }
 }

@@ -14,10 +14,20 @@ namespace HiddenMickeyProject.Areas.Editor
 
         public override void RegisterArea(AreaRegistrationContext context)
         {
+            //context.MapRoute(
+            //    "location_default",
+            //    "Editor/{action}/{RegionName}/{AreaName}/{LocationName}",
+            //    new { controller = "Location", action = "Detaild", locationName = UrlParameter.Optional }
+            //);
+            //context.MapRoute(
+            //    "area_default",
+            //    "Editor/{action}/{RegionName}/{AreaName}",
+            //    new { controller = "Area", action = "Details", areaName = UrlParameter.Optional }
+            //);
             context.MapRoute(
-                "Editor_default",
-                "Editor/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                "region_default",
+                "Editor/{action}/{RegionName}",
+                new { controller="Region", action = "Index", regionName = UrlParameter.Optional }
             );
         }
     }

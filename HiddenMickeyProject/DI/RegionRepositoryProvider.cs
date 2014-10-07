@@ -7,13 +7,13 @@ using Ninject.Activation;
 
 namespace HiddenMickeyProject.DI
 {
-    public class RepositoryProvider : Provider<Data.MysqlSource>
+    public class RepositoryProvider : Provider<Data.INavigationRepository>
     {
 
-        protected override Data.MysqlSource CreateInstance(IContext context)
+        protected override Data.INavigationRepository CreateInstance(IContext context)
         {
             string connection = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
-            return new Data.MysqlSource(connection);
+            return new CachingRepository(new Data.MysqlSource(connection));
         }
     }
 }

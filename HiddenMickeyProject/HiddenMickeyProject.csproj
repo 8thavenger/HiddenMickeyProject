@@ -140,17 +140,16 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Areas\Editor\Controllers\AreaController.cs" />
-    <Compile Include="Areas\Editor\Controllers\EntryController.cs" />
-    <Compile Include="Areas\Editor\Controllers\LocationController.cs" />
     <Compile Include="Areas\Editor\Controllers\RegionController.cs" />
     <Compile Include="Areas\Editor\EditorAreaRegistration.cs" />
-    <Compile Include="Areas\Editor\Models\RegionModel.cs" />
+    <Compile Include="CachingDataSource.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DI\NavigationBinder.cs" />
     <Compile Include="DI\RegionRepositoryProvider.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Navigator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -268,11 +267,6 @@
     <Content Include="Areas\Editor\Views\Web.config" />
     <Content Include="Areas\Editor\Views\Region\Index.cshtml" />
     <Content Include="Areas\Editor\Views\Region\Details.cshtml" />
-    <Content Include="Areas\Editor\Views\Area\Index.cshtml" />
-    <Content Include="Areas\Editor\Views\Shared\AreaListPartial.cshtml" />
-    <Content Include="Areas\Editor\Views\Region\EditRegion.cshtml" />
-    <Content Include="Areas\Editor\Views\Region\Create.cshtml" />
-    <Content Include="Areas\Editor\Views\Region\Edit.cshtml" />
     <None Include="Content\bootstrap-theme.css.map" />
     <None Include="Content\bootstrap.css.map" />
     <None Include="Content\Site.css.less" />
@@ -284,9 +278,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Editor\Views\Entry\" />
-    <Folder Include="Areas\Editor\Views\Location\" />
-    <Folder Include="Models\" />
+    <Folder Include="Areas\Editor\Models\" />
+    <Folder Include="Areas\Editor\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HiddenMickeyProject.Data\HiddenMickeyProject.Data.csproj">
