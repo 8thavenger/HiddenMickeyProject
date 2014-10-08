@@ -86,3 +86,4 @@ D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\obj\Debug\HiddenMickeyPr
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\obj\Debug\HiddenMickeyProject.pdb
 C:\Users\Kevin\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\HiddenMickeyProject.Data.dll
 C:\Users\Kevin\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\HiddenMickeyProject.Data.pdb
+C:\Users\Kevin\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\dotless.Core.dll

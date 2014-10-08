@@ -27,7 +27,7 @@ namespace HiddenMickeyProject
             bundles.Add(new StyleBundle("~/Content/css").Include(
                         "~/Content/reset.css",
                         "~/Content/bootstrap.css",
-                        "~/Content/Site.less.css"));
+                        "~/Content/Site.css.less"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
