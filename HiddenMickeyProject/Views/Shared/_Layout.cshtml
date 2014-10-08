@@ -7,21 +7,23 @@
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
     </head>
-    <body>
-        <header>
+    <body class="container">
+        <header class="row">
+            <h1>The Hidden Mickey Project</h1>
+            <hgroup class="cols-sm-12">
+				A better way to search for Hidden Mickeys.
+			</hgroup>
+			<nav>
+				<ul class="nav nav-tabs">
+                    @RenderSection("navlinks", required: false)
+				</ul>
+			</nav>
         </header>
-        <div id="body">
-            <section class="container">
-                @RenderSection("featured", required: false)
-            </section>
-            <section class="container">
-                @RenderBody()
-            </section>
-        </div>
+        <section class="row">
+            @RenderBody()
+        </section>
         <footer>
-            <div class="content-wrapper">
-                <p>&copy; @DateTime.Now.Year - The Hidden Mickey Project</p>
-            </div>
+                &copy; @DateTime.Now.Year - The Hidden Mickey Project
         </footer>
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)

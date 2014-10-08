@@ -103,16 +103,15 @@ namespace HiddenMickeyProject.Data
 
         private static bool InsertRegion(Region region, MySqlConnection cn)
         {
-            int rows = 0;
             using (MySqlCommand cmd = new MySqlCommand("InsertRegion", cn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("Region_Name", MySqlDbType.VarChar,50).Value = region.RegionName;
                 cn.Open();
-                rows = cmd.ExecuteNonQuery();
+                region.RegionId = Convert.ToInt32(cmd.ExecuteScalar());
                 cn.Close();
             }
-            return rows == 1;
+            return region.RegionId != 0;
         }
 
         private static bool UpdateRegion(Region region, MySqlConnection cn)
@@ -143,6 +142,48 @@ namespace HiddenMickeyProject.Data
                     rows = cmd.ExecuteNonQuery();
                     cn.Close();
                 }
+            }
+            return rows == 1;
+        }
+
+
+        public bool SaveArea(Area area)
+        {
+            using (MySqlConnection cn = new MySqlConnection(this.connectionString))
+            {
+                if (UpdateArea(area, cn))
+                    return true;
+                else
+                    return InsertArea(area, cn);
+            }
+        }
+
+        private bool InsertArea(Area area, MySqlConnection cn)
+        {
+            using (MySqlCommand cmd = new MySqlCommand("InsertArea", cn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("Region_Id", MySqlDbType.Int32).Value = area.RegionId;
+                cmd.Parameters.Add("Area_Name", MySqlDbType.VarChar, 50).Value = area.AreaName;
+                cn.Open();
+                area.AreaId = Convert.ToInt32(cmd.ExecuteScalar());
+                cn.Close();
+            }
+            return area.AreaId != 0;
+        }
+
+        private bool UpdateArea(Area area, MySqlConnection cn)
+        {
+            int rows = 0;
+            using (MySqlCommand cmd = new MySqlCommand("UpdateArea", cn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("Area_Id", MySqlDbType.Int32).Value = area.AreaId;
+                cmd.Parameters.Add("Region_Id", MySqlDbType.Int32).Value = area.RegionId;
+                cmd.Parameters.Add("Area_Name", MySqlDbType.VarChar, 50).Value = area.AreaName;
+                cn.Open();
+                rows = cmd.ExecuteNonQuery();
+                cn.Close();
             }
             return rows == 1;
         }

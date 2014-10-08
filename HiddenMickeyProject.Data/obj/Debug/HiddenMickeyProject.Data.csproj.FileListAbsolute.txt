@@ -10,3 +10,4 @@ C:\Users\Kevin\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin
 C:\Users\Kevin\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Debug\MySql.Data.dll
 C:\Users\Kevin\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\obj\Debug\HiddenMickeyProject.Data.dll
 C:\Users\Kevin\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\obj\Debug\HiddenMickeyProject.Data.pdb
+C:\Users\Kevin\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\obj\Debug\HiddenMickeyProject.Data.csprojResolveAssemblyReference.cache

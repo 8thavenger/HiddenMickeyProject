@@ -12,5 +12,6 @@ namespace HiddenMickeyProject.Data
         bool SaveRegon(Region region);
         bool DeleteRegion(Region region);
         IEnumerable<Area> GetAreasByRegionId(int id);
+        bool SaveArea(Area area);
     }
 }

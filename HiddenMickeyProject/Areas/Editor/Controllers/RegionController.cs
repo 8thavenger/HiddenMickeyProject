@@ -29,5 +29,28 @@ namespace HiddenMickeyProject.Areas.Editor.Controllers
             return View("Details", navigator);
         }
 
+        [HttpGet]
+        public ViewResult CreateArea(string regionName)
+        {
+            Area model = new Area();
+            model.RegionId = this.repository.Regions().DefaultIfEmpty(new Region()).FirstOrDefault(r => r.RegionName == regionName).RegionId;
+            return View("CreateArea", model);
+        }
+
+        [HttpPost]
+        public ActionResult CreateArea(Area area)
+        {
+            try
+            {
+                this.repository.SaveArea(area);
+                Models.Navigator model = new Navigator();
+                model.RegionName = this.repository.GetRegionById(area.RegionId).RegionName;
+                return RedirectToAction("Details", model);
+            }
+            catch
+            {
+                return View("CreateArea", area);
+            }            
+        }
     }
 }

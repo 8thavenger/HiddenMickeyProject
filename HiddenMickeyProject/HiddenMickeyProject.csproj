@@ -241,7 +241,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\reset.css" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
@@ -267,9 +267,10 @@
     <Content Include="Areas\Editor\Views\Web.config" />
     <Content Include="Areas\Editor\Views\Region\Index.cshtml" />
     <Content Include="Areas\Editor\Views\Region\Details.cshtml" />
+    <Content Include="Areas\Editor\Views\Region\CreateArea.cshtml" />
     <None Include="Content\bootstrap-theme.css.map" />
     <None Include="Content\bootstrap.css.map" />
-    <None Include="Content\Site.css.less" />
+    <Content Include="Content\Site.less.css" />
     <None Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="fonts\glyphicons-halflings-regular.ttf" />
     <None Include="fonts\glyphicons-halflings-regular.woff" />

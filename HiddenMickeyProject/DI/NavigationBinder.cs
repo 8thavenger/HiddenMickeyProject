@@ -27,7 +27,9 @@ namespace HiddenMickeyProject.DI
             int regionId = navigator.Regions.DefaultIfEmpty(new Data.Region()).FirstOrDefault(r => r.RegionName == navigator.RegionName).RegionId;
             
             navigator.Areas.AddRange(this.repository.GetAreasByRegionId(regionId));
-            int areaId = navigator.Areas.DefaultIfEmpty(new Data.Area()).FirstOrDefault(a => a.AreaName == navigator.AreaName).AreaId;
+            int areaId = 0;
+            if(!String.IsNullOrEmpty(navigator.AreaName))                
+                areaId = navigator.Areas.DefaultIfEmpty(new Data.Area()).FirstOrDefault(a => a.AreaName == navigator.AreaName).AreaId;
 
             //locatons
 
