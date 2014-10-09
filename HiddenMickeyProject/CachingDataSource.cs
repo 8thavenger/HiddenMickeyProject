@@ -30,47 +30,44 @@ namespace HiddenMickeyProject
 
         public Region GetRegionById(int id)
         {
-            Dictionary<int, Region> result = GetRegionDictionary();
-            if (!result.ContainsKey(id))
+            List<Region> result = HttpContext.Current.Cache["Regions"] as List<Region>;
+            Region region = result.DefaultIfEmpty(new Region()).FirstOrDefault(r => r.RegionId == id);
+            if (region.RegionId == 0)
             {
-                Region region = this.repository.GetRegionById(id);
-                AddRegionToDictionary(region, result);
+                region = this.repository.GetRegionById(id);
+                result.Add(region);
+                HttpContext.Current.Cache.Insert("Regions", result, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
             }
-            return result[id];
-        }
-
-        private void AddRegionToDictionary(Region region, Dictionary<int, Region> result)
-        {
-            result.Add(region.RegionId, region);
-            HttpContext.Current.Cache.Insert("Region", result, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
+            return region;
         }
 
         public bool SaveRegon(Region region)
         {
             if (this.repository.SaveRegon(region))
             {
-                Dictionary<int, Region> result = GetRegionDictionary();
-                if (!result.ContainsKey(region.RegionId))
-                    AddRegionToDictionary(region, result);
+                List<Region> result = HttpContext.Current.Cache["Regions"] as List<Region>;
+                Region existing = result.DefaultIfEmpty(null).FirstOrDefault(r => r.RegionId == region.RegionId);
+                if (existing != null)
+                    result.Remove(existing);
+                result.Add(region);
+                HttpContext.Current.Cache.Insert("Regions", result, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
                 return true;
             }
             return false;
         }
-
-        private static Dictionary<int, Region> GetRegionDictionary()
-        {
-            Dictionary<int, Region> result = HttpContext.Current.Cache["Region"] as Dictionary<int, Region>;
-            if (result == null)
-            {
-                result = new Dictionary<int, Region>();
-            }
-            return result;
-        }
-
       
         public bool DeleteRegion(Region region)
         {
-            return this.repository.DeleteRegion(region);
+            if (this.repository.DeleteRegion(region))
+            {
+                List<Region> result = HttpContext.Current.Cache["Regions"] as List<Region>;
+                Region existing = result.DefaultIfEmpty(null).FirstOrDefault(r => r.RegionId == region.RegionId);
+                if (existing != null)
+                    result.Remove(existing);
+                HttpContext.Current.Cache.Insert("Regions", result, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
+                return true;
+            }
+            return false;
         }
 
         public IEnumerable<Area> GetAreasByRegionId(int id)

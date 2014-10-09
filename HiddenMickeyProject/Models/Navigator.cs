@@ -14,6 +14,15 @@ namespace HiddenMickeyProject.Models
         private List<Region> regions = new List<Region>();
         private List<Area> areas = new List<Area>();
 
+        private int regionId;
+
+        public int RegionId
+        {
+            get { return regionId; }
+            set { regionId = value; }
+        }
+        
+
         public string RegionName
         {
             get { return regionName; }

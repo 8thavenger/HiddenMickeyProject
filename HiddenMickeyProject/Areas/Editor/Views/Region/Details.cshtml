@@ -18,18 +18,7 @@
         @Html.DisplayFor(model => model.RegionName)
     </div>
     @Html.ActionLink("Add Area", "CreateArea", new { Area="Editor", RegionName=Model.RegionName },null)
-    <table>
-        <tr><th>Area Name</th><th></th></tr>
-        @foreach (Area item in Model.Areas)
-        {
-            <tr>
-                <td>@item.AreaName</td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { Area = "Editor", AreaName = item.AreaName, RegionName = Model.RegionName },null);
-                </td>
-            </tr>
-        }
-    </table>
+    @Html.Partial("AreaList", Model);
 </fieldset>
 <p>
     @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |

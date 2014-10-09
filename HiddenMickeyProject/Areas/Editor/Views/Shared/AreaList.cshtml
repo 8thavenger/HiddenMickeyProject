@@ -1,0 +1,14 @@
+﻿@using HiddenMickeyProject.Data
+@model HiddenMickeyProject.Models.Navigator
+    <table>
+        <tr><th>Area Name</th><th></th></tr>
+        @foreach (Area item in Model.Areas)
+        {
+            <tr>
+                <td>@item.AreaName</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { Area = "Editor", AreaName = item.AreaName, RegionName = Model.RegionName },null);
+                </td>
+            </tr>
+        }
+    </table>

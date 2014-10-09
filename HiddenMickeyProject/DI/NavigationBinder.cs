@@ -24,9 +24,9 @@ namespace HiddenMickeyProject.DI
             navigator.LocationName = controllerContext.RouteData.Values["LocationName"] as string;
 
             navigator.Regions.AddRange(this.repository.Regions());
-            int regionId = navigator.Regions.DefaultIfEmpty(new Data.Region()).FirstOrDefault(r => r.RegionName == navigator.RegionName).RegionId;
+            navigator.RegionId = navigator.Regions.DefaultIfEmpty(new Data.Region()).FirstOrDefault(r => r.RegionName == navigator.RegionName).RegionId;
             
-            navigator.Areas.AddRange(this.repository.GetAreasByRegionId(regionId));
+            navigator.Areas.AddRange(this.repository.GetAreasByRegionId(navigator.RegionId));
             int areaId = 0;
             if(!String.IsNullOrEmpty(navigator.AreaName))                
                 areaId = navigator.Areas.DefaultIfEmpty(new Data.Area()).FirstOrDefault(a => a.AreaName == navigator.AreaName).AreaId;

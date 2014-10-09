@@ -266,14 +266,22 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Areas\Editor\Views\Web.config" />
     <Content Include="Areas\Editor\Views\Region\Index.cshtml" />
     <Content Include="Areas\Editor\Views\Region\Details.cshtml" />
     <Content Include="Areas\Editor\Views\Region\CreateArea.cshtml" />
+    <Content Include="Areas\Editor\Views\Region\Edit.cshtml" />
+    <Content Include="Areas\Editor\Views\Shared\AreaList.cshtml" />
+    <Content Include="Areas\Editor\Views\Region\Create.cshtml" />
+    <Content Include="Areas\Editor\Views\Region\Delete.cshtml" />
     <None Include="Content\bootstrap-theme.css.map" />
     <None Include="Content\bootstrap.css.map" />
-    <None Include="Content\Site.css.less" />
+    <Content Include="Content\Site.css.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="fonts\glyphicons-halflings-regular.ttf" />
     <None Include="fonts\glyphicons-halflings-regular.woff" />
@@ -283,7 +291,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Editor\Models\" />
-    <Folder Include="Areas\Editor\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HiddenMickeyProject.Data\HiddenMickeyProject.Data.csproj">
