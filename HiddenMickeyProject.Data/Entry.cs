@@ -7,6 +7,13 @@ namespace HiddenMickeyProject.Data
         private string clue;
         private string hint = string.Empty;
         private int locationId;
+        private int entryId;
+
+        public int EntryId
+        {
+            get { return entryId; }
+            set { entryId = value; }
+        }
 
         public string Clue
         {

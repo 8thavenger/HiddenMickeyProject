@@ -11,13 +11,14 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 <table>
-    <tr>
-        <th>
-            Region Name
-        </th>
-        <th></th>
-    </tr>
-
+    <thead>
+        <tr>
+            <th>
+                Region Name
+            </th>
+            <th></th>
+        </tr>
+    </thead>
 @foreach (var item in Model) {
     <tr>
         <td>

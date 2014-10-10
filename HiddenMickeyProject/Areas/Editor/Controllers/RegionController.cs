@@ -11,9 +11,9 @@ namespace HiddenMickeyProject.Areas.Editor.Controllers
 {
     public class RegionController : Controller
     {
-        IRegionRepository repository = null;
+        INavigationRepository repository = null;
 
-        public RegionController(IRegionRepository repository)
+        public RegionController(INavigationRepository repository)
         {
             this.repository = repository;
         }

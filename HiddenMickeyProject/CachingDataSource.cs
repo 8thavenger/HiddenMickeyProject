@@ -9,7 +9,7 @@ namespace HiddenMickeyProject
 {
     public class CachingRepository : INavigationRepository
     {
-        private IRegionRepository repository = null;
+        private INavigationRepository repository = null;
         Cache cache = null;
 
         public CachingRepository(INavigationRepository repository)
@@ -98,6 +98,57 @@ namespace HiddenMickeyProject
                 return true;
             }
             return false;
+        }
+
+
+        public IEnumerable<Location> GetLocationsByAreaId(int areaId)
+        {
+            return this.repository.GetLocationsByAreaId(areaId);
+        }
+
+        public IEnumerable<Entry> GetEntriesByLocationId(int locationId)
+        {
+            return this.repository.GetEntriesByLocationId(locationId);
+        }
+
+        public Area GetAreaById(int areaId)
+        {
+            return this.repository.GetAreaById(areaId);
+        }
+
+        public Location GetLocationById(int locationId)
+        {
+            return this.repository.GetLocationById(locationId);
+        }
+
+        public Entry GetEntryById(int entryId)
+        {
+            return this.repository.GetEntryById(entryId);
+        }
+
+        public bool SaveLocation(Location location)
+        {
+            return this.repository.SaveLocation(location);
+        }
+
+        public bool SaveEntry(Entry entry)
+        {
+            return this.repository.SaveEntry(entry);
+        }
+
+        public bool DeleteArea(Area area)
+        {
+            return this.repository.DeleteArea(area);
+        }
+
+        public bool DeleteLocation(Location location)
+        {
+            return this.repository.DeleteLocation(location);
+        }
+
+        public bool DeleteEntry(Entry entry)
+        {
+            return this.repository.DeleteEntry(entry);
         }
     }
 }

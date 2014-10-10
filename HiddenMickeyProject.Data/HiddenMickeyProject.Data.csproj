@@ -46,9 +46,7 @@
   <ItemGroup>
     <Compile Include="Area.cs" />
     <Compile Include="Entry.cs" />
-    <Compile Include="IAreaRepository.cs" />
     <Compile Include="INavigationRepository.cs" />
-    <Compile Include="IRegionRepository.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="MysqlSource.cs" />
     <Compile Include="Region.cs" />

@@ -62,7 +62,6 @@ namespace HiddenMickeyProject.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<Data.IRegionRepository>().ToProvider(typeof(DI.RepositoryProvider));
             kernel.Bind<Data.INavigationRepository>().ToProvider(typeof(DI.RepositoryProvider));
             ModelBinders.Binders.Add(typeof(Models.Navigator), new DI.NavigationBinder(kernel.Get<Data.INavigationRepository>()));
         }        

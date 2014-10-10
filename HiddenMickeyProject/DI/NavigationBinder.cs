@@ -27,13 +27,18 @@ namespace HiddenMickeyProject.DI
             navigator.RegionId = navigator.Regions.DefaultIfEmpty(new Data.Region()).FirstOrDefault(r => r.RegionName == navigator.RegionName).RegionId;
             
             navigator.Areas.AddRange(this.repository.GetAreasByRegionId(navigator.RegionId));
-            int areaId = 0;
-            if(!String.IsNullOrEmpty(navigator.AreaName))                
-                areaId = navigator.Areas.DefaultIfEmpty(new Data.Area()).FirstOrDefault(a => a.AreaName == navigator.AreaName).AreaId;
+            if (!String.IsNullOrEmpty(navigator.AreaName))
+            {
+                navigator.AreaId = navigator.Areas.DefaultIfEmpty(new Data.Area()).FirstOrDefault(a => a.AreaName == navigator.AreaName).AreaId;
+                navigator.Locations.AddRange(this.repository.GetLocationsByAreaId(navigator.AreaId));
+            }
 
             //locatons
-
-            //entities
+            if(!String.IsNullOrEmpty(navigator.LocationName))
+            {
+                navigator.LocationId = navigator.Locations.DefaultIfEmpty(new Data.Location()).First(l => l.LocationName == navigator.LocationName).LocationId;
+                navigator.Entries.AddRange(this.repository.GetEntriesByLocationId(navigator.LocationId));
+            }
 
             return navigator;
         }

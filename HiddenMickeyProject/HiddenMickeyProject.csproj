@@ -279,7 +279,7 @@
     <Content Include="Areas\Editor\Views\Region\Delete.cshtml" />
     <None Include="Content\bootstrap-theme.css.map" />
     <None Include="Content\bootstrap.css.map" />
-    <Content Include="Content\Site.css.less">
+    <Content Include="Content\Site.less">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="fonts\glyphicons-halflings-regular.eot" />
