@@ -9,6 +9,10 @@ namespace HiddenMickeyProject
 {
     public class CachingRepository : INavigationRepository
     {
+        private const string ENTRY_KEY = "entry[{0}]";
+        private const string LOCATION_KEY = "location[{0}]";
+        private const string AREA_KEY = "area[{0}]";
+        private const string REGION_KEY = "regions";
         private INavigationRepository repository = null;
         Cache cache = null;
 
@@ -19,24 +23,24 @@ namespace HiddenMickeyProject
 
         public IEnumerable<Region> Regions()
         {
-            IEnumerable<Region> result = HttpContext.Current.Cache["Regions"] as IEnumerable<Region>;
+            IEnumerable<Region> result = HttpContext.Current.Cache[REGION_KEY] as IEnumerable<Region>;
             if (result == null)
             {
                 result = this.repository.Regions();
-                HttpContext.Current.Cache.Insert("Regions", result, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
+                HttpContext.Current.Cache.Insert(REGION_KEY, result, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
             }
             return result;
         }
 
         public Region GetRegionById(int id)
         {
-            List<Region> result = HttpContext.Current.Cache["Regions"] as List<Region>;
+            List<Region> result = HttpContext.Current.Cache[REGION_KEY] as List<Region>;
             Region region = result.DefaultIfEmpty(new Region()).FirstOrDefault(r => r.RegionId == id);
             if (region.RegionId == 0)
             {
                 region = this.repository.GetRegionById(id);
                 result.Add(region);
-                HttpContext.Current.Cache.Insert("Regions", result, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
+                HttpContext.Current.Cache.Insert(REGION_KEY, result, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
             }
             return region;
         }
@@ -45,12 +49,12 @@ namespace HiddenMickeyProject
         {
             if (this.repository.SaveRegon(region))
             {
-                List<Region> result = HttpContext.Current.Cache["Regions"] as List<Region>;
+                List<Region> result = HttpContext.Current.Cache[REGION_KEY] as List<Region>;
                 Region existing = result.DefaultIfEmpty(null).FirstOrDefault(r => r.RegionId == region.RegionId);
                 if (existing != null)
                     result.Remove(existing);
                 result.Add(region);
-                HttpContext.Current.Cache.Insert("Regions", result, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
+                HttpContext.Current.Cache.Insert(REGION_KEY, result, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
                 return true;
             }
             return false;
@@ -60,11 +64,11 @@ namespace HiddenMickeyProject
         {
             if (this.repository.DeleteRegion(region))
             {
-                List<Region> result = HttpContext.Current.Cache["Regions"] as List<Region>;
+                List<Region> result = HttpContext.Current.Cache[REGION_KEY] as List<Region>;
                 Region existing = result.DefaultIfEmpty(null).FirstOrDefault(r => r.RegionId == region.RegionId);
                 if (existing != null)
                     result.Remove(existing);
-                HttpContext.Current.Cache.Insert("Regions", result, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
+                HttpContext.Current.Cache.Insert(REGION_KEY, result, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
                 return true;
             }
             return false;
@@ -72,7 +76,7 @@ namespace HiddenMickeyProject
 
         public IEnumerable<Area> GetAreasByRegionId(int id)
         {
-            string key = string.Format("area[{0}]", id);
+            string key = string.Format(AREA_KEY, id);
             List<Area> areas = HttpContext.Current.Cache[key] as List<Area>;
             if(areas == null)
             {
@@ -86,13 +90,11 @@ namespace HiddenMickeyProject
         {
             if (this.repository.SaveArea(area))
             {
-                string key = string.Format("area[{0}]", area.RegionId);
+                string key = string.Format(AREA_KEY, area.RegionId);
                 List<Area> areas = HttpContext.Current.Cache[key] as List<Area>;
-                if (areas.Count(a => a.AreaId == area.AreaId) != 0)
-                {
-                    int index = areas.IndexOf(area);
-                    areas.RemoveAt(index);
-                }
+                Area current = areas.DefaultIfEmpty(null).First(a => a.AreaId == area.AreaId);
+                if (current != null)
+                    areas.Remove(current);
                 areas.Add(area);
                 HttpContext.Current.Cache.Insert(key, areas, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
                 return true;
@@ -100,15 +102,28 @@ namespace HiddenMickeyProject
             return false;
         }
 
-
         public IEnumerable<Location> GetLocationsByAreaId(int areaId)
         {
-            return this.repository.GetLocationsByAreaId(areaId);
+            string key = string.Format(LOCATION_KEY, areaId);
+            List<Location> locations = HttpContext.Current.Cache[key] as List<Location>;
+            if (locations == null)
+            {
+                locations = this.repository.GetLocationsByAreaId(areaId).ToList();
+                HttpContext.Current.Cache.Insert(key, locations, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
+            }
+            return locations;
         }
 
         public IEnumerable<Entry> GetEntriesByLocationId(int locationId)
         {
-            return this.repository.GetEntriesByLocationId(locationId);
+            string key = string.Format(ENTRY_KEY, locationId);
+            List<Entry> entries = HttpContext.Current.Cache[key] as List<Entry>;
+            if (entries == null)
+            {
+                entries = this.repository.GetEntriesByLocationId(locationId).ToList();
+                HttpContext.Current.Cache.Insert(key, entries, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
+            }
+            return entries;
         }
 
         public Area GetAreaById(int areaId)
@@ -128,27 +143,79 @@ namespace HiddenMickeyProject
 
         public bool SaveLocation(Location location)
         {
-            return this.repository.SaveLocation(location);
+            if (this.repository.SaveLocation(location))
+            {
+                List<Location> locations = this.GetLocationsByAreaId(location.AreaId).ToList();
+                Location current = locations.DefaultIfEmpty(null).First(l => l.LocationId == location.LocationId);
+                if (current != null)
+                    locations.Remove(current);
+                locations.Add(location);
+                string key = string.Format(LOCATION_KEY, location.AreaId);
+                HttpContext.Current.Cache.Insert(key, locations, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
+                return true;
+            }
+            return false;
         }
 
         public bool SaveEntry(Entry entry)
         {
-            return this.repository.SaveEntry(entry);
+            if (this.repository.SaveEntry(entry))
+            {
+                List<Entry> entries = this.GetEntriesByLocationId(entry.LocationId).ToList();
+                Entry current = entries.DefaultIfEmpty(null).First(e=>e.EntryId==entry.EntryId);
+                if (current != null)
+                    entries.Remove(current);
+                entries.Add(entry);
+                string key = string.Format(ENTRY_KEY, entry.LocationId);
+                HttpContext.Current.Cache.Insert(key, entries, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
+                return true;
+            }
+            return false;
         }
 
         public bool DeleteArea(Area area)
         {
-            return this.repository.DeleteArea(area);
+            if (this.repository.DeleteArea(area))
+            {
+                string key = string.Format(AREA_KEY, area.RegionId);
+                List<Area> areas = HttpContext.Current.Cache[key] as List<Area>;
+                Area current = areas.DefaultIfEmpty(null).First(a=>a.AreaId == area.AreaId);
+                if(current != null)
+                    areas.Remove(current);
+                HttpContext.Current.Cache.Insert(key, areas, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
+                return true;
+            }
+            return false;
         }
 
         public bool DeleteLocation(Location location)
         {
-            return this.repository.DeleteLocation(location);
+            if (this.repository.DeleteLocation(location))
+            {
+                List<Location> locations = this.GetLocationsByAreaId(location.AreaId).ToList();
+                Location current = locations.DefaultIfEmpty(null).First(l => l.LocationId == location.LocationId);
+                if (current != null)
+                    locations.Remove(current);
+                string key = string.Format(LOCATION_KEY, location.AreaId);
+                HttpContext.Current.Cache.Insert(key, locations, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
+                return true;
+            }
+            return false;
         }
 
         public bool DeleteEntry(Entry entry)
         {
-            return this.repository.DeleteEntry(entry);
+            if (this.repository.DeleteEntry(entry))
+            {
+                List<Entry> entries = this.GetEntriesByLocationId(entry.LocationId).ToList();
+                Entry current = entries.DefaultIfEmpty(null).First(e => e.EntryId == entry.EntryId);
+                if (current != null)
+                    entries.Remove(current);
+                string key = string.Format(ENTRY_KEY, entry.LocationId);
+                HttpContext.Current.Cache.Insert(key, entries, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
+                return true;
+            }
+            return false;
         }
     }
 }

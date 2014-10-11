@@ -21,6 +21,6 @@
     @Html.Partial("AreaList", Model)
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.RouteLink("Edit", "region_default", new { Action = "Edit", RegionName = Model.RegionName, AreaName = Model.AreaName })
     @Html.ActionLink("Back to List", "Index")
 </p>

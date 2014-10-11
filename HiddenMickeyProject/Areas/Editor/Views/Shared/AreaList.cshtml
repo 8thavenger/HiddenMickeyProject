@@ -12,8 +12,9 @@
             <tr>
                 <td>@item.AreaName</td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { Area = "Editor", AreaName = item.AreaName, RegionName = Model.RegionName }, null) | 
-                    @Html.ActionLink("Details", "Details", new { Area = "Editor", AreaName = item.AreaName, RegionName = Model.RegionName }, null)
+                    @Html.RouteLink("Edit", "area_default", new { Action="Edit", AreaName = item.AreaName, RegionName = Model.RegionName }, null) | 
+                    @Html.RouteLink("Details", "area_default", new { AreaName = item.AreaName, RegionName = Model.RegionName }) | 
+                    @Html.RouteLink("Delete", "area_default", new { Action = "Delete", AreaName = item.AreaName, RegionName = Model.RegionName }, null)
                 </td>
             </tr>
         }

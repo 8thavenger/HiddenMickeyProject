@@ -51,6 +51,7 @@
     <Compile Include="MysqlSource.cs" />
     <Compile Include="Region.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

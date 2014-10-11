@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hidden-mickey>
+  <region id="1" name="Epcot">
+    <area id="1" name="Future World">      
+    </area>
+    <area id="2" name="World Showcase">
+    </area>
+  </region>
+  <region id="2" name="The Magic Kingdom">
+    <area id="3" name="Main St. USA">
+    </area>
+    <area id="4" name="Adventureland">
+    </area>
+    <area id="5" name="Frontierland">
+    </area>
+    <area id="6" name="Liberty Square">
+    </area>
+    <area id="7" name="Fantasyland">
+    </area>
+    <area id="8" name="Tomorrowland">
+    </area>
+  </region>
+  <region id="3" name="The Animal Kingdom">
+    <area id="9" name="Oasis">
+    </area>
+    <area id="10" name="Camp Mini-Mickey">
+    </area>
+    <area id="11" name="Asia">
+    </area>
+    <area id="12" name="Africa">
+    </area>
+    <area id="13" name="Rafili's Planet Watch">
+    </area>
+    <area id="14" name="Discovery Island">
+    </area>
+    <area id="15" name="Dino-land USA">
+    </area>
+  </region>
+  <region id="4" name="Hollywood Studios">
+    <area id="16" name="Animation Courtyard">
+    </area>
+    <area id="17" name="Echo Lake">
+    </area>
+    <area id="18" name="Hollywood Boulevard">
+    </area>
+    <area id="19" name="Pixar Place">
+    </area>
+    <area id="20" name="Sunset Boulevard">
+    </area>
+    <area id="21" name="Streets of America">
+    </area>
+  </region>
+</hidden-mickey>

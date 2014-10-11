@@ -143,6 +143,7 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Editor\Controllers\AreaController.cs" />
     <Compile Include="Areas\Editor\Controllers\RegionController.cs" />
     <Compile Include="Areas\Editor\EditorAreaRegistration.cs" />
     <Compile Include="CachingDataSource.cs" />
@@ -160,6 +161,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -218,6 +220,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\MickeyTile.gif" />
+    <EmbeddedResource Include="MockData.xml" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.0-vsdoc.js" />
@@ -277,6 +280,12 @@
     <Content Include="Areas\Editor\Views\Shared\AreaList.cshtml" />
     <Content Include="Areas\Editor\Views\Region\Create.cshtml" />
     <Content Include="Areas\Editor\Views\Region\Delete.cshtml" />
+    <Content Include="Areas\Editor\Views\Area\Edit.cshtml" />
+    <Content Include="Areas\Editor\Views\Shared\AreaEditPartial.cshtml" />
+    <Content Include="Areas\Editor\Views\Area\Create.cshtml" />
+    <Content Include="Areas\Editor\Views\Area\Details.cshtml" />
+    <Content Include="Areas\Editor\Views\Area\Delete.cshtml" />
+    <Content Include="Areas\Editor\Views\Shared\EditLocationPartial.cshtml" />
     <None Include="Content\bootstrap-theme.css.map" />
     <None Include="Content\bootstrap.css.map" />
     <Content Include="Content\Site.less">
@@ -327,6 +336,13 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>$(SolutionDir)packages\dotless.1.4.1.0\tool\dotless.compiler.exe -m   $(ProjectDir)content\site.less $(ProjectDir)content\site.css</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

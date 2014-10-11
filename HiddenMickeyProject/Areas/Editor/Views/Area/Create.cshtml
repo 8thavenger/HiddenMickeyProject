@@ -1,0 +1,20 @@
+﻿@model HiddenMickeyProject.Models.Navigator
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    @Html.Partial("EditLocationPartial", Model);
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
