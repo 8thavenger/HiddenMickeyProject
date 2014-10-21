@@ -39,14 +39,14 @@ namespace HiddenMickeyProject.Areas.Editor.Controllers
         [HttpGet]
         public ActionResult AddLocation(Navigator navigator)
         {
-            return View("Create",navigator);
+            return View("AddLocation",navigator);
         }
 
         [HttpPost]
         public RedirectToRouteResult AddLocation(Location location, string regionName, string areaName)
         {
             this.repository.SaveLocation(location);
-            return RedirectToRoute("area_default", new { RegionName = regionName });
+            return RedirectToRoute("area_default", new { RegionName = regionName, AreaName= areaName });
         }
 
         [HttpGet]

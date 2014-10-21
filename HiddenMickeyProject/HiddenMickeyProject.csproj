@@ -249,22 +249,7 @@
     </Content>
     <Content Include="Content\reset.css" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Images\accent.png" />
-    <Content Include="Images\bullet.png" />
-    <Content Include="Images\heroAccent.png" />
-    <Content Include="Images\orderedList0.png" />
-    <Content Include="Images\orderedList1.png" />
-    <Content Include="Images\orderedList2.png" />
-    <Content Include="Images\orderedList3.png" />
-    <Content Include="Images\orderedList4.png" />
-    <Content Include="Images\orderedList5.png" />
-    <Content Include="Images\orderedList6.png" />
-    <Content Include="Images\orderedList7.png" />
-    <Content Include="Images\orderedList8.png" />
-    <Content Include="Images\orderedList9.png" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -282,10 +267,20 @@
     <Content Include="Areas\Editor\Views\Region\Delete.cshtml" />
     <Content Include="Areas\Editor\Views\Area\Edit.cshtml" />
     <Content Include="Areas\Editor\Views\Shared\AreaEditPartial.cshtml" />
-    <Content Include="Areas\Editor\Views\Area\Create.cshtml" />
     <Content Include="Areas\Editor\Views\Area\Details.cshtml" />
     <Content Include="Areas\Editor\Views\Area\Delete.cshtml" />
     <Content Include="Areas\Editor\Views\Shared\EditLocationPartial.cshtml" />
+    <Content Include="Areas\Editor\Views\Area\AddLocation.cshtml" />
+    <None Include="CodeTemplates\AddController\ApiController.tt" />
+    <None Include="CodeTemplates\AddController\ApiControllerWithContext.tt" />
+    <None Include="CodeTemplates\AddController\Controller.tt" />
+    <None Include="CodeTemplates\AddController\ControllerWithContext.tt" />
+    <None Include="CodeTemplates\AddView\CSHTML\Create.tt" />
+    <None Include="CodeTemplates\AddView\CSHTML\Delete.tt" />
+    <None Include="CodeTemplates\AddView\CSHTML\Details.tt" />
+    <None Include="CodeTemplates\AddView\CSHTML\Edit.tt" />
+    <None Include="CodeTemplates\AddView\CSHTML\Empty.tt" />
+    <None Include="CodeTemplates\AddView\CSHTML\List.tt" />
     <None Include="Content\bootstrap-theme.css.map" />
     <None Include="Content\bootstrap.css.map" />
     <Content Include="Content\Site.less">
@@ -306,6 +301,9 @@
       <Project>{A30C41B2-EB65-4BCD-B8D9-68511C0198D5}</Project>
       <Name>HiddenMickeyProject.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
