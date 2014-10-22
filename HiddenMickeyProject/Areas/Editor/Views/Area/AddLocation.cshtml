@@ -1,0 +1,40 @@
+﻿@model HiddenMickeyProject.Data.Location
+
+@{
+    ViewBag.Title = "AddLocation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddLocation</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.AreaId)
+    <fieldset>
+        <legend>Location</legend>
+			<table>
+				<tbody>
+                    <tr>
+			            <td>
+                            Location Name
+			            </td>
+			            <td>
+                        @Html.EditorFor(model => model.LocationName)
+                        @Html.ValidationMessageFor(model => model.LocationName)
+			            </td>
+                    </tr>
+			</tbody>
+		</table>
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
