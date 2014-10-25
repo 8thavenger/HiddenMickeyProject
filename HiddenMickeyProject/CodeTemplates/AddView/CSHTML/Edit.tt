@@ -77,48 +77,49 @@ if (mvcHost.ReferenceScriptLibraries) {
 
     <fieldset>
         <legend><#= mvcHost.ViewDataType.Name #></legend>
-			<table>
-				<tbody>
+
 <#
 foreach (ModelProperty property in GetModelProperties(mvcHost.ViewDataType)) {
-    if (!property.IsPrimaryKey && !property.IsReadOnly && property.Scaffold) {
+    if (property.Scaffold) {
+        if (property.IsPrimaryKey) {
 #>
-        <tr>
-			<td>
-<#		
-        if (property.IsForeignKey) {
+        @Html.HiddenFor(model => model.<#= property.Name #>)
+
+<#
+        } else if (!property.IsReadOnly) {
+#>
+        <div class="editor-label">
+<#
+            if (property.IsForeignKey) {
 #>
             @Html.LabelFor(model => model.<#= property.Name #>, "<#= property.AssociationName #>")
 <#
-        } else {
+            } else {
 #>
             @Html.LabelFor(model => model.<#= property.Name #>)
 <#
-        }
+            }
 #>
-			</td>
-			<td>
+        </div>
+        <div class="editor-field">
 <#
-        if (property.IsForeignKey) {
+            if (property.IsForeignKey) {
 #>
             @Html.DropDownList("<#= property.Name #>", String.Empty)
 <#
-        } else {
+            } else {
 #>
             @Html.EditorFor(model => model.<#= property.Name #>)
 <#
-        }
+            }
 #>
             @Html.ValidationMessageFor(model => model.<#= property.Name #>)
-			</td>
-        </tr>
+        </div>
 
 <#
+        }
     }
 }
-#>
-			</tbody>
-		</table>
 #>
         <p>
             <input type="submit" value="Save" />

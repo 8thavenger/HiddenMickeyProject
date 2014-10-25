@@ -62,59 +62,57 @@ if (!String.IsNullOrEmpty(mvcHost.MasterPageFile)) {
     @Html.ActionLink("Create New", "Create")
 </p>
 <table>
-	<thead>
-		<tr>
+    <tr>
 <#
 List<ModelProperty> properties = GetModelProperties(mvcHost.ViewDataType);
 foreach (ModelProperty property in properties) {
     if (!property.IsPrimaryKey && property.Scaffold) {
 #>
-			<th>
-				@Html.DisplayNameFor(model => model.<#= property.ValueExpression #>)
-			</th>
+        <th>
+            @Html.DisplayNameFor(model => model.<#= property.ValueExpression #>)
+        </th>
 <#
     }
 }
 #>
-			<th></th>
-		</tr>
-	</thead>
-	<tbody>
-	@foreach (var item in Model) {
-		<tr>
-	<#
-	foreach (ModelProperty property in properties) {
-		if (!property.IsPrimaryKey && property.Scaffold) {
-	#>
-			<td>
-				@Html.DisplayFor(modelItem => <#= property.ItemValueExpression #>)
-			</td>
-	<#
-		}
-	}
+        <th></th>
+    </tr>
 
-	string pkName = GetPrimaryKeyName(mvcHost.ViewDataType);
-	if (pkName != null) {
-	#>
-			<td>
-				@Html.ActionLink("Edit", "Edit", new { id=item.<#= pkName #> }) |
-				@Html.ActionLink("Details", "Details", new { id=item.<#= pkName #> }) |
-				@Html.ActionLink("Delete", "Delete", new { id=item.<#= pkName #> })
-			</td>
-	<#
-	} else {
-	#>
-			<td>
-				@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-				@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-				@Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-			</td>
-	<#
-	}
-	#>
-		</tr>
-	}
-	</tbody>
+@foreach (var item in Model) {
+    <tr>
+<#
+foreach (ModelProperty property in properties) {
+    if (!property.IsPrimaryKey && property.Scaffold) {
+#>
+        <td>
+            @Html.DisplayFor(modelItem => <#= property.ItemValueExpression #>)
+        </td>
+<#
+    }
+}
+
+string pkName = GetPrimaryKeyName(mvcHost.ViewDataType);
+if (pkName != null) {
+#>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.<#= pkName #> }) |
+            @Html.ActionLink("Details", "Details", new { id=item.<#= pkName #> }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.<#= pkName #> })
+        </td>
+<#
+} else {
+#>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+<#
+}
+#>
+    </tr>
+}
+
 </table>
 <#
 // The following code closes the asp:Content tag used in the case of a master page and the body and html tags in the case of a regular view page

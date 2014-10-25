@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="utf-8" />
+        <title>Main Page - The Hidden Mickey Project</title>
+        <meta name="viewport" content="width=device-width, initial-zoom:1" />
+        <link rel="stylesheet" href="Content/reset.css"/>
+        <link rel="stylesheet" href="Content/bootstrap.css"/>
+        <link rel="stylesheet" href="Content/site.css"/>
+		<style type="text/css">
+			@media (max-height:768px){
+				.scrollable{
+					height:400px;
+				}
+			}
+			@media (min-height:768px) and (max-height:992px){
+				.scrollable{
+					height:500px;
+				}
+			}
+			@media (min-height:992px) and (max-height:1200px){
+				.scrollable{
+					height:600px;
+				}
+			}
+			@media (min-height:1200px){
+				.scrollable{
+					height:700px;
+				}
+			}
+		</style>
+		<script type="text/javascript" src="Content/modernizr-2.5.3.js"></script>
+    </head>
+    <body>
+		<div class="container-fluid">
+			<header class="row">
+				<h1>The Hidden Mickey Project</h1>
+				<hgroup class="cols-sm-12">
+					A better way to search for Hidden Mickeys.
+				</hgroup>
+				<nav>
+					<ul class="nav nav-tabs">
+						<li><a href="#">Oasis</a></li>
+						<li><a href="#">Camp Minie-Mickey</a></li>
+						<li><a href="#">Asia</a></li>
+						<li class="active"><a href="#">Africa</a></li>
+						<li><a href="#">Rafiki's Planet Watch</a></li>
+						<li><a href="#">Discovery Island</a></li>
+						<li><a href="#">Dino-Land U.S.A.</a></li>
+					</ul>
+				</nav>
+			</header>
+			<section class="row">
+				<nav class="col-sm-12 col-md-2">
+					<ul class="nav nav-pills nav-stacked">
+						<li class="active"><a href="#">Killmanjaro Safari</a></li>
+						<li><a href="#">Pangani Exploration Trail</a></li>
+						<li><a href="#">Fesitval of the Lion King</a></li>
+					</ul>
+				</nav>
+				<div class="scrollable col-sm-12 col-md-10">
+					Tap hint to see clue
+					<article>
+						<div class="hint">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						</div>
+						<div class="clue">
+							Nulla vitae ante fermentum, mollis tortor id, imperdiet justo.
+						</div>
+					</article>
+					<article>
+						<div class="hint">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						</div>
+						<div class="clue">
+							Nulla vitae ante fermentum, mollis tortor id, imperdiet justo.
+						</div>
+					</article>
+					<article>
+						<div class="hint">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						</div>
+						<div class="clue">
+							Nulla vitae ante fermentum, mollis tortor id, imperdiet justo.
+						</div>
+					</article>
+					<article>
+						<div class="hint">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						</div>
+						<div class="clue">
+							Nulla vitae ante fermentum, mollis tortor id, imperdiet justo.
+						</div>
+					</article>
+				</div>
+			</section>	
+		<div>
+        <footer>
+                &copy; 2014 - The Hidden Mickey Project
+        </footer>
+		<script type="text/javascript" src="Content/jquery-1.9.0.min.js"></script>
+		<script type="text/javascript" src="Content/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.scrollable article').each(function(){
+					var clue = $(this).find('.clue');
+					var hint = $(this).find('.hint');
+					clue.css('display','none');
+					hint.bind('click',function(){
+						clue.slideToggle();
+					});					
+				});
+			});			
+		</script>
+    </body>
+</html>

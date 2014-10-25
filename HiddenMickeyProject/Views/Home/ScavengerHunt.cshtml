@@ -1,0 +1,73 @@
+﻿@model HiddenMickeyProject.Models.Navigator
+
+@{
+    ViewBag.Title = "ScavengerHunt";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section navlinks{
+    <li><a href="#">Oasis</a></li>
+    <li><a href="#">Camp Minie-Mickey</a></li>
+    <li><a href="#">Asia</a></li>
+    <li class="active"><a href="#">Africa</a></li>
+    <li><a href="#">Rafiki's Planet Watch</a></li>
+    <li><a href="#">Discovery Island</a></li>
+    <li><a href="#">Dino-Land U.S.A.</a></li>
+}
+
+
+<nav class="col-sm-12 col-md-2">
+	<ul class="nav nav-pills nav-stacked">
+		<li class="active"><a href="#">Killmanjaro Safari</a></li>
+		<li><a href="#">Pangani Exploration Trail</a></li>
+		<li><a href="#">Fesitval of the Lion King</a></li>
+	</ul>
+</nav>
+<div class="scrollable col-sm-12 col-md-10">
+	Tap hint to see clue
+	<article>
+		<div class="hint">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		</div>
+		<div class="clue">
+			Nulla vitae ante fermentum, mollis tortor id, imperdiet justo.
+		</div>
+	</article>
+	<article>
+		<div class="hint">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		</div>
+		<div class="clue">
+			Nulla vitae ante fermentum, mollis tortor id, imperdiet justo.
+		</div>
+	</article>
+	<article>
+		<div class="hint">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		</div>
+		<div class="clue">
+			Nulla vitae ante fermentum, mollis tortor id, imperdiet justo.<a href="Index.cshtml">Index.cshtml</a>
+		</div>
+	</article>
+	<article>
+		<div class="hint">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		</div>
+		<div class="clue">
+			Nulla vitae ante fermentum, mollis tortor id, imperdiet justo.
+		</div>
+	</article>
+</div>
+@section scripts{
+<script type="text/javascript">
+			$(document).ready(function(){
+				$('.scrollable article').each(function(){
+					var clue = $(this).find('.clue');
+					var hint = $(this).find('.hint');
+					clue.css('display','none');
+					hint.bind('click',function(){
+						clue.slideToggle();
+					});					
+				});
+			});	
+            </script>
+        }

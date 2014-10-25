@@ -1,0 +1,66 @@
+Magic Kingdom
+ 28.392833,-81.570804
+ 
+Epcot
+ 28.380795,-81.555793
+ 
+Hollywood Studios
+ 28.361362,-81.554365
+ 
+Animal Kingdom
+ 28.348538,-81.589647
+ 
+Typhoon Lagoon
+ 28.369175,-81.526304
+ 
+Blizzard Beach
+ 28.355438,-81.573016
+ 
+ESPN Wide World of Sports
+ 28.338944,-81.551617
+ 
+Downtown Disney
+ 28.367519,-81.519402
+ 
+Contemporary Resort
+ 28.416678,-81.575963
+ 
+Coronado Springs Resort
+ 28.362627,-81.571033
+ 
+All Star Resorts
+ 28.34616,-81.576689
+ 
+Grand Floridian Resort & Spa
+ 28.409464,-81.588646
+ 
+Polynesian Resort
+ 28.404215,-81.582914
+ 
+Wilderness Lodge Resort
+ 28.406116,-81.573792
+ 
+Animal Kingdom Lodge
+ 28.350973,-81.602905
+ 
+Fort Wilderness Campgrounds
+ 28.395708,-81.553556
+ 
+Port Orleans - French Quarter
+ 28.378698,-81.537416
+ 
+Port Orleans - Riverside
+ 28.384235,-81.539016
+ 
+Old Key West Resort
+ 28.37772,-81.533993
+ 
+Saratoga Springs Resort & Spa
+ 28.381028,-81.524254
+ 
+Caribbean Beach Resort
+ 28.366688,-81.542999
+ 
+POP Century Resort
+ 28.353463,-81.543079
+

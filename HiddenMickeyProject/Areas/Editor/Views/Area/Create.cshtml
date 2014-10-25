@@ -1,0 +1,42 @@
+﻿@model HiddenMickeyProject.Data.Area
+@{
+    ViewBag.Title = "Create Area";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Create Area</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)    
+    @Html.HiddenFor(model => model.RegionId)
+    <fieldset>
+        <legend>Create Area</legend>
+        <div class="col-xs-12 col-sm-6">
+            <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="AreaName">Area Name</label>
+                        </td>
+                        <td>
+                            @Html.EditorFor(model => model.AreaName)
+                            @Html.ValidationMessageFor(model => model.AreaName)
+                        </td>
+                    </tr>
+                <tbody>
+            </table>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <ul>
+                <li>
+                    @Html.ActionLink("Back to List", "Index")
+                </li>
+                <li>
+                    <input type="submit" value="Create" />
+                </li>
+            </ul>
+        </div>
+    </fieldset>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

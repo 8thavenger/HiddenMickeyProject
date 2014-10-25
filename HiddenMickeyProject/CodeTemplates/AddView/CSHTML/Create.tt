@@ -74,18 +74,18 @@ if (mvcHost.ReferenceScriptLibraries) {
 #>
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
-
     <fieldset>
-        <legend><#= mvcHost.ViewDataType.Name #></legend>
-			<table>
+        <legend>Create <#= mvcHost.ViewDataType.Name #></legend>
+		<div class="col-xs-12 col-sm-6">
+			<table cellpadding="0" cellspacing="0" style="width:100%;">
 				<tbody>
 <#
 foreach (ModelProperty property in GetModelProperties(mvcHost.ViewDataType)) {
+					#><tr><#
     if (!property.IsPrimaryKey && !property.IsReadOnly && property.Scaffold) {
 #>
-        <tr>
-			<td>
-<#		
+        <td>
+<#
         if (property.IsForeignKey) {
 #>
             @Html.LabelFor(model => model.<#= property.Name #>, "<#= property.AssociationName #>")
@@ -96,8 +96,8 @@ foreach (ModelProperty property in GetModelProperties(mvcHost.ViewDataType)) {
 <#
         }
 #>
-			</td>
-			<td>
+        </td>
+        <td>
 <#
         if (property.IsForeignKey) {
 #>
@@ -110,24 +110,29 @@ foreach (ModelProperty property in GetModelProperties(mvcHost.ViewDataType)) {
         }
 #>
             @Html.ValidationMessageFor(model => model.<#= property.Name #>)
-			</td>
-        </tr>
+        </td>
+		</tr>
 
 <#
     }
 }
 #>
-			</tbody>
+		<tbody>
 		</table>
-        <p>
-            <input type="submit" value="Create" />
-        </p>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<ul>
+				<li>
+					@Html.ActionLink("Back to List", "Index")
+				</li>
+				<li>
+					<input type="submit" value="Create"/>
+				</li>
+			</ul>
+		</div>
     </fieldset>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 <#
 if(mvcHost.IsContentPage && mvcHost.ReferenceScriptLibraries) {
 #>

@@ -221,6 +221,18 @@
     <Content Include="Global.asax" />
     <Content Include="Images\MickeyTile.gif" />
     <EmbeddedResource Include="MockData.xml" />
+    <Content Include="Sample\base.html" />
+    <Content Include="Sample\Content\bootstrap.css" />
+    <Content Include="Sample\Content\bootstrap.min.js" />
+    <Content Include="Sample\Content\jquery-1.9.0.min.js" />
+    <Content Include="Sample\Content\modernizr-2.5.3.js" />
+    <Content Include="Sample\Content\reset.css" />
+    <Content Include="Sample\Content\site.css" />
+    <Content Include="Sample\Create.html" />
+    <Content Include="Sample\Editor.html" />
+    <Content Include="Sample\gps coords.txt" />
+    <Content Include="Sample\Images\MickeyTile.gif" />
+    <Content Include="Sample\Main.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.0-vsdoc.js" />
@@ -271,6 +283,14 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Areas\Editor\Views\Web.config" />
+    <Content Include="Areas\Editor\Views\Region\Create.cshtml" />
+    <Content Include="Areas\Editor\Views\Area\Create.cshtml" />
+    <None Include="CodeTemplates\AddView\CSHTML\Create.tt" />
+    <None Include="CodeTemplates\AddView\CSHTML\Delete.tt" />
+    <None Include="CodeTemplates\AddView\CSHTML\Details.tt" />
+    <None Include="CodeTemplates\AddView\CSHTML\Edit.tt" />
+    <None Include="CodeTemplates\AddView\CSHTML\Empty.tt" />
+    <None Include="CodeTemplates\AddView\CSHTML\List.tt" />
     <None Include="Content\bootstrap-theme.css.map" />
     <None Include="Content\bootstrap.css.map" />
     <Content Include="Content\Site.less">
@@ -281,12 +301,11 @@
     <None Include="fonts\glyphicons-halflings-regular.woff" />
     <None Include="readme.txt" />
     <None Include="Scripts\jquery-1.9.0.min.map" />
+    <Content Include="Views\Home\ScavengerHunt.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Editor\Models\" />
-    <Folder Include="Areas\Editor\Views\Area\" />
-    <Folder Include="Areas\Editor\Views\Region\" />
     <Folder Include="Areas\Editor\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
@@ -294,6 +313,9 @@
       <Project>{A30C41B2-EB65-4BCD-B8D9-68511C0198D5}</Project>
       <Name>HiddenMickeyProject.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
