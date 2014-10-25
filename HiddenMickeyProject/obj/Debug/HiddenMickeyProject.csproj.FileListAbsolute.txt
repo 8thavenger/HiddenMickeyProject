@@ -10,11 +10,8 @@ D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\Ninject.dll
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\Ninject.Web.Common.dll
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\Ninject.Web.Mvc.dll
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Net.Http.dll
-D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Net.Http.Formatting.dll
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Net.Http.WebRequest.dll
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Web.Helpers.dll
-D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Web.Http.dll
-D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Web.Http.WebHost.dll
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Web.Mvc.dll
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Web.Optimization.dll
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Web.Razor.dll
@@ -29,11 +26,8 @@ D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\Ninject.Web.Common.x
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\Ninject.Web.Mvc.xml
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\Newtonsoft.Json.xml
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Net.Http.xml
-D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Net.Http.Formatting.xml
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Net.Http.WebRequest.xml
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Web.Helpers.xml
-D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Web.Http.xml
-D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Web.Http.WebHost.xml
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Web.Mvc.xml
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Web.Razor.xml
 D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Web.WebPages.xml
@@ -128,3 +122,5 @@ E:\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\System.Web.WebPa
 E:\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject\obj\Debug\HiddenMickeyProject.csprojResolveAssemblyReference.cache
 E:\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject\obj\Debug\HiddenMickeyProject.dll
 E:\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject\obj\Debug\HiddenMickeyProject.pdb
+D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\Content\Site.less
+D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\dotless.Core.dll

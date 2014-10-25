@@ -1,5 +1,15 @@
-﻿@{
+﻿@using HiddenMickeyProject.Data
+@using System.Collections
+@model IEnumerable<Region>
+@{
     ViewBag.Title = "Home Page";
 }
 @Html.ActionLink("Go to Editors", "Index", "Region", new { Area = "Editor" }, new  { })
+<h1>Which Area are you visiting?</h1>
+<ul>
+    @foreach (Region item in Model)
+    {
+        <li>@Html.RouteLink(item.RegionName,"hunt_default",new {RegionName=@item.RegionName}, null)</li>
+    }
+</ul>
 

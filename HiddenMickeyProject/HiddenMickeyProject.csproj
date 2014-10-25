@@ -263,8 +263,6 @@
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -273,19 +271,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Areas\Editor\Views\Web.config" />
-    <Content Include="Areas\Editor\Views\Region\Index.cshtml" />
-    <Content Include="Areas\Editor\Views\Region\Details.cshtml" />
-    <Content Include="Areas\Editor\Views\Region\CreateArea.cshtml" />
-    <Content Include="Areas\Editor\Views\Region\Edit.cshtml" />
-    <Content Include="Areas\Editor\Views\Shared\AreaList.cshtml" />
-    <Content Include="Areas\Editor\Views\Region\Create.cshtml" />
-    <Content Include="Areas\Editor\Views\Region\Delete.cshtml" />
-    <Content Include="Areas\Editor\Views\Area\Edit.cshtml" />
-    <Content Include="Areas\Editor\Views\Shared\AreaEditPartial.cshtml" />
-    <Content Include="Areas\Editor\Views\Area\Create.cshtml" />
-    <Content Include="Areas\Editor\Views\Area\Details.cshtml" />
-    <Content Include="Areas\Editor\Views\Area\Delete.cshtml" />
-    <Content Include="Areas\Editor\Views\Shared\EditLocationPartial.cshtml" />
     <None Include="Content\bootstrap-theme.css.map" />
     <None Include="Content\bootstrap.css.map" />
     <Content Include="Content\Site.less">
@@ -300,6 +285,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Editor\Models\" />
+    <Folder Include="Areas\Editor\Views\Area\" />
+    <Folder Include="Areas\Editor\Views\Region\" />
+    <Folder Include="Areas\Editor\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HiddenMickeyProject.Data\HiddenMickeyProject.Data.csproj">
