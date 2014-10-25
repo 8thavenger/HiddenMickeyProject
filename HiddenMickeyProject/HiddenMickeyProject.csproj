@@ -144,7 +144,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Editor\Controllers\AreaController.cs" />
-    <Compile Include="Areas\Editor\Controllers\LocationController.cs" />
     <Compile Include="Areas\Editor\Controllers\RegionController.cs" />
     <Compile Include="Areas\Editor\EditorAreaRegistration.cs" />
     <Compile Include="CachingDataSource.cs" />
@@ -158,20 +157,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Editor\Views\Area\Create.cshtml" />
-    <Content Include="Areas\Editor\Views\Area\Delete.cshtml" />
-    <Content Include="Areas\Editor\Views\Area\Details.cshtml" />
-    <Content Include="Areas\Editor\Views\Area\Edit.cshtml" />
-    <Content Include="Areas\Editor\Views\Region\Create.cshtml" />
-    <Content Include="Areas\Editor\Views\Region\CreateArea.cshtml" />
-    <Content Include="Areas\Editor\Views\Region\Delete.cshtml" />
-    <Content Include="Areas\Editor\Views\Region\Details.cshtml" />
-    <Content Include="Areas\Editor\Views\Region\Edit.cshtml" />
-    <Content Include="Areas\Editor\Views\Region\Index.cshtml" />
-    <Content Include="Areas\Editor\Views\Shared\AreaEditPartial.cshtml" />
-    <Content Include="Areas\Editor\Views\Shared\AreaList.cshtml" />
-    <Content Include="Areas\Editor\Views\Shared\EditLocationPartial.cshtml" />
-    <Content Include="Areas\Editor\Views\Web.config" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -235,9 +220,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\MickeyTile.gif" />
-    <EmbeddedResource Include="MockData.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
+    <EmbeddedResource Include="MockData.xml" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.0-vsdoc.js" />
@@ -289,6 +272,20 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Areas\Editor\Views\Web.config" />
+    <Content Include="Areas\Editor\Views\Region\Index.cshtml" />
+    <Content Include="Areas\Editor\Views\Region\Details.cshtml" />
+    <Content Include="Areas\Editor\Views\Region\CreateArea.cshtml" />
+    <Content Include="Areas\Editor\Views\Region\Edit.cshtml" />
+    <Content Include="Areas\Editor\Views\Shared\AreaList.cshtml" />
+    <Content Include="Areas\Editor\Views\Region\Create.cshtml" />
+    <Content Include="Areas\Editor\Views\Region\Delete.cshtml" />
+    <Content Include="Areas\Editor\Views\Area\Edit.cshtml" />
+    <Content Include="Areas\Editor\Views\Shared\AreaEditPartial.cshtml" />
+    <Content Include="Areas\Editor\Views\Area\Create.cshtml" />
+    <Content Include="Areas\Editor\Views\Area\Details.cshtml" />
+    <Content Include="Areas\Editor\Views\Area\Delete.cshtml" />
+    <Content Include="Areas\Editor\Views\Shared\EditLocationPartial.cshtml" />
     <None Include="Content\bootstrap-theme.css.map" />
     <None Include="Content\bootstrap.css.map" />
     <Content Include="Content\Site.less">
@@ -303,8 +300,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Editor\Models\" />
-    <Folder Include="Areas\Editor\Views\Entry\" />
-    <Folder Include="Areas\Editor\Views\Location\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HiddenMickeyProject.Data\HiddenMickeyProject.Data.csproj">
