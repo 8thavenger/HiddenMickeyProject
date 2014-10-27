@@ -19,15 +19,36 @@ body
 	padding:1em;
 }
 
-header{
+.header{
 	text-align:center;
 	max-width:1024px;
-	
-    hgroup{
-	width:100%;
-	text-align:left;
-	margin:1em;
-    }
+    background-repeat: no-repeat;
+	background-position:center top;
+}
+
+@media screen and (min-width:1200px){
+	header{
+		height:155px;
+		background-image:url('../Images/HiddenMickeyLogolg.png');
+		.header()
+	}
+}
+
+@media screen and (max-width:1200px) and (min-width:768px){
+	header{
+		height:117px;
+		background-image:url('../Images/HiddenMickeyLogoMd.png');
+		.header()
+	}
+}
+
+@media screen and (max-width: 768px)
+{
+	header{
+		height:90px;
+		background-image:url('../Images/HiddenMickeyLogoSm.png');
+		.header()
+	}
 }
 
 footer{

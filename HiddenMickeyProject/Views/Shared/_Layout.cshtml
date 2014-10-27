@@ -10,17 +10,13 @@
     <body>
         <div class="container">
             <header class="row">
-                <h1>The Hidden Mickey Project</h1>
-                <hgroup class="cols-sm-12">
-				    A better way to search for Hidden Mickeys.
-			    </hgroup>
-			    <nav>
+            </header>
+            <section class="row">
+			    <nav class="col-sm-12">
 				    <ul class="nav nav-tabs">
                         @RenderSection("navlinks", required: false)
 				    </ul>
 			    </nav>
-            </header>
-            <section class="row">
                 @RenderBody()
             </section>
             <footer>
