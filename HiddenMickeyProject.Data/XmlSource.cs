@@ -49,10 +49,10 @@ namespace HiddenMickeyProject.Data
         {
             XmlNodeList nodes = doc.SelectNodes("hidden-mickey/region/area[@id=" + areaId + "]/location");
             List<Location> locations = new List<Location>();
-            Location location = new Location();
             foreach (XmlNode node in nodes)
             {
-                location.AreaId = Convert.ToInt32(node.ParentNode.Attributes["id"]);
+                Location location = new Location();
+                location.AreaId = Convert.ToInt32(node.ParentNode.Attributes["id"].Value);
                 location.LocationId = Convert.ToInt32(node.Attributes["id"].Value);
                 location.LocationName = node.Attributes["name"].Value;
                 locations.Add(location);
@@ -62,7 +62,18 @@ namespace HiddenMickeyProject.Data
 
         public IEnumerable<Entry> GetEntriesByLocationId(int locationId)
         {
-            throw new NotImplementedException();
+            XmlNodeList nodes = doc.SelectNodes("hidden-mickey/region/area/location[@id=" + locationId + "]/entry");
+            List<Entry> entries = new List<Entry>();
+            foreach (XmlNode node in nodes)
+            {
+                Entry entry = new Entry();
+                entry.EntryId = Convert.ToInt32(node.Attributes["id"].Value);
+                entry.Hint = node.SelectSingleNode("Hint").InnerText;
+                entry.Clue = node.SelectSingleNode("Clue").InnerText;
+                entry.LocationId = locationId;
+                entries.Add(entry);
+            }
+            return entries;
         }
 
         public Region GetRegionById(int id)

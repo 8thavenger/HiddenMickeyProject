@@ -10,6 +10,7 @@ namespace HiddenMickeyProject.Controllers
     public class HomeController : Controller
     {
         Data.INavigationRepository repository = null;
+
         public HomeController(INavigationRepository repository)
         {
             this.repository = repository;

@@ -14,9 +14,16 @@ namespace HiddenMickeyProject
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+            name: "start-hunt",
+            url: "Hunt/{RegionName}",
+            defaults: new { controller = "Home", action = "ScavengerHunt" }
+        );
+
+
+            routes.MapRoute(
             name: "scavenger-hunt",
             url: "Hunt/{RegionName}/{AreaName}/{LocationName}",
-            defaults: new { controller = "Home", action = "ScavengerHunt", RegionName="Epcot",AreaName="Future World",LocationName=UrlParameter.Optional}
+            defaults: new { controller = "Home", action = "ScavengerHunt",LocationName=UrlParameter.Optional}
         );
 
             routes.MapRoute(

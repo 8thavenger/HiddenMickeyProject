@@ -26,14 +26,14 @@ namespace HiddenMickeyProject.Areas.Editor.Controllers
 
         public ViewResult Details(Navigator navigator)
         {
-            Models.RegionViewModel model = Utilities.DataFactory.CreateRegion(navigator);
+            Models.RegionViewModel model = Utilities.ObjectFactory.CreateRegion(navigator);
             return View("Details", model);
         }
 
         [HttpGet]
         public ViewResult Edit(Navigator navigator)
         {
-            Models.RegionViewModel model = Utilities.DataFactory.CreateRegion(navigator);
+            Models.RegionViewModel model = Utilities.ObjectFactory.CreateRegion(navigator);
             return View("Edit", model);
         }
 
@@ -43,9 +43,7 @@ namespace HiddenMickeyProject.Areas.Editor.Controllers
             if(this.repository.SaveRegon(region))
                 return RedirectToAction("Index");
             else{
-                Navigator navigator = new Navigator();
-                navigator.RegionId = region.RegionId;
-                navigator.RegionName = region.RegionName;
+                Navigator navigator = Utilities.ObjectFactory.GetNavigator(region.RegionName, string.Empty, string.Empty);
                 return RedirectToAction("Edit", new { navigator = navigator });
             }
         }
@@ -64,41 +62,15 @@ namespace HiddenMickeyProject.Areas.Editor.Controllers
                 return RedirectToAction("Index");
             else
             {
-                Navigator navigator = new Navigator();
-                navigator.RegionId = region.RegionId;
-                navigator.RegionName = region.RegionName;
+                Navigator navigator = Utilities.ObjectFactory.GetNavigator(region.RegionName, string.Empty, string.Empty);
                 return RedirectToAction("Create", new { navigator = navigator });
             }
         }
 
         [HttpGet]
-        public ViewResult CreateArea(string regionName)
-        {
-            Area model = new Area();
-            model.RegionId = this.repository.Regions().DefaultIfEmpty(new Region()).FirstOrDefault(r => r.RegionName == regionName).RegionId;
-            return View("CreateArea", model);
-        }
-
-        [HttpPost]
-        public ActionResult CreateArea(Area area)
-        {
-            try
-            {
-                this.repository.SaveArea(area);
-                Models.Navigator model = new Navigator();
-                model.RegionName = this.repository.GetRegionById(area.RegionId).RegionName;
-                return RedirectToAction("Details", model);
-            }
-            catch
-            {
-                return View("CreateArea", area);
-            }            
-        }
-
-        [HttpGet]
         public ViewResult Delete(Navigator navigator)
         {
-            Models.RegionViewModel model = Utilities.DataFactory.CreateRegion(navigator);
+            Models.RegionViewModel model = Utilities.ObjectFactory.CreateRegion(navigator);
             return View("Delete", model);
         }
 
@@ -109,9 +81,7 @@ namespace HiddenMickeyProject.Areas.Editor.Controllers
                 return RedirectToAction("Index");
             else
             {
-                Navigator navigator = new Navigator();
-                navigator.RegionId = region.RegionId;
-                navigator.RegionName = region.RegionName;
+                Navigator navigator = Utilities.ObjectFactory.GetNavigator(region.RegionName, string.Empty, string.Empty);
                 return RedirectToAction("Delete", new { navigator = navigator });
             }
         }

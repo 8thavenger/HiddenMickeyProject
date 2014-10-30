@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hidden-mickey>
   <region id="1" name="Epcot">
-    <area id="1" name="Future World">      
+    <area id="1" name="Future World">
+      <location id="1" name="Spaceship Earth"/>
+      <location id="2" name="Innoventions East"/>
+      <location id="3" name="Innoventions West"/>
+      <location id="4" name="The Seas with Nemo and Friends"/>
+      <location id="5" name="TheLand"/>
+      <location id="6" name="Journey into Imagination"/>
+      <location id="7" name="Ellens Energy Adventure"/>
+      <location id="8" name="Mission to Mars"/>
+      <location id="9" name="Test Track"/>
     </area>
     <area id="2" name="World Showcase">
     </area>

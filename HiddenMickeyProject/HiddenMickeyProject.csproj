@@ -148,14 +148,16 @@
     <Compile Include="Areas\Editor\EditorAreaRegistration.cs" />
     <Compile Include="CachingDataSource.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="DataFactory.cs" />
     <Compile Include="DI\NavigationBinder.cs" />
     <Compile Include="DI\RegionRepositoryProvider.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AreaViewModel.cs" />
+    <Compile Include="Models\LocationViewModel.cs" />
     <Compile Include="Models\Navigator.cs" />
     <Compile Include="Models\RegionViewModel.cs" />
+    <Compile Include="Utilities\ObjectFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
