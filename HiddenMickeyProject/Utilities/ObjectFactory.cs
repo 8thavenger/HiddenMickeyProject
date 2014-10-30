@@ -1,32 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Reflection;
 using System.IO;
+using System.Linq;
+using System.Reflection;
 using System.Xml;
-using HiddenMickeyProject.Models;
 using HiddenMickeyProject.Data;
+using HiddenMickeyProject.Models;
 
 namespace HiddenMickeyProject.Utilities
 {
     public static class ObjectFactory
     {
-        public static INavigationRepository GetRepository()
+        public static AreaViewModel CreateArea(Models.Navigator navigator)
         {
-#if DEBUG
-            Assembly assembly = Assembly.GetExecutingAssembly();
-            Stream data = assembly.GetManifestResourceStream("HiddenMickeyProject.MockData.xml");
-            INavigationRepository repository;
-            using (XmlReader reader = XmlReader.Create(data))
-            {
-                repository = new Data.XmlSource(reader);
-            }
-            return new CachingRepository(repository);
-#else
-            string connection = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
-            return new CachingRepository(new Data.MysqlSource(connection));
-#endif
+            AreaViewModel area = new AreaViewModel();
+            area.RegionId = navigator.RegionId;
+            area.AreaId = navigator.AreaId;
+            area.AreaName = navigator.AreaName;
+            //area.Locations.AddRange(navigator.Areas);
+            return area;
+        }
+
+        public static LocationViewModel CreateLocation(Models.Navigator navigator)
+        {
+            LocationViewModel location = new LocationViewModel();
+            location.LocationId = navigator.LocationId;
+            location.AreaId = navigator.AreaId;
+            location.LocationName = navigator.LocationName;
+            //area.Locations.AddRange(navigator.Areas);
+            return location;
+        }
+
+        public static RegionViewModel CreateRegion(Models.Navigator navigator)
+        {
+            RegionViewModel region = new RegionViewModel();
+            region.RegionId = navigator.RegionId;
+            region.RegionName = navigator.RegionName;
+            region.Areas.AddRange(navigator.Areas);
+            return region;
         }
 
         public static Navigator GetNavigator(string regionName, string areaName, string locationName)
@@ -56,34 +66,22 @@ namespace HiddenMickeyProject.Utilities
 
             return navigator;
         }
-        
-        public static RegionViewModel CreateRegion(Models.Navigator navigator)
-        {
-            RegionViewModel region = new RegionViewModel();
-            region.RegionId = navigator.RegionId;
-            region.RegionName = navigator.RegionName;
-            region.Areas.AddRange(navigator.Areas);
-            return region;
-        }
 
-        public static AreaViewModel CreateArea(Models.Navigator navigator)
+        public static INavigationRepository GetRepository()
         {
-            AreaViewModel area = new AreaViewModel();
-            area.RegionId = navigator.RegionId;
-            area.AreaId = navigator.AreaId;
-            area.AreaName = navigator.AreaName;
-            //area.Locations.AddRange(navigator.Areas);
-            return area;
-        }
-
-        public static LocationViewModel CreateLocation(Models.Navigator navigator)
-        {
-            LocationViewModel location = new LocationViewModel();
-            location.LocationId= navigator.LocationId;
-            location.AreaId = navigator.AreaId;
-            location.LocationName = navigator.LocationName;
-            //area.Locations.AddRange(navigator.Areas);
-            return location;
+#if DEBUG
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            Stream data = assembly.GetManifestResourceStream("HiddenMickeyProject.MockData.xml");
+            INavigationRepository repository;
+            using (XmlReader reader = XmlReader.Create(data))
+            {
+                repository = new Data.XmlSource(reader);
+            }
+            return new CachingRepository(repository);
+#else
+            string connection = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
+            return new CachingRepository(new Data.MysqlSource(connection));
+#endif
         }
     }
 }
