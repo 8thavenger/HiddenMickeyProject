@@ -1,0 +1,27 @@
+﻿@model HiddenMickeyProject.Models.RegionViewModel
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Details</h2>
+<fieldset>
+    <legend>Region</legend>
+    <div class="col-xs-12 col-sm-6">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        Region Name
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.RegionName)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        @Html.RouteLink("Edit", "region_default", new { RegionName = Model.RegionName, Action = "Edit" });
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</fieldset>

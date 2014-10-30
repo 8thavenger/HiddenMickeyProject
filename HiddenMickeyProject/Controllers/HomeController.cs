@@ -9,9 +9,15 @@ namespace HiddenMickeyProject.Controllers
 {
     public class HomeController : Controller
     {
+        Data.INavigationRepository repository = null;
+        public HomeController(INavigationRepository repository)
+        {
+            this.repository = repository;
+        }
+
         public ActionResult Index()
         {
-            return View("Index",new List<Region>());
+            return View("Index",repository.Regions());
         }
 
         public ActionResult ScavengerHunt(Models.Navigator navigator)

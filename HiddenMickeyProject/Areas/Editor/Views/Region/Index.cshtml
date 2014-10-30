@@ -1,0 +1,36 @@
+﻿@model IEnumerable<HiddenMickeyProject.Data.Region>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Region Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+	<thead>
+    <tr>
+        <th>
+            Region Name
+        </th>
+        <th></th>
+    </tr>
+	</thead>
+	<tbody>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegionName)
+        </td>
+        <td>
+            @Html.RouteLink("Edit", "region_default", new { RegionName = item.RegionName, Action = "Edit" })|
+            @Html.RouteLink("Details", "region_default", new { RegionName = item.RegionName, Action = "Details" }) |
+            @Html.RouteLink("Delete", "region_default", new { RegionName = item.RegionName, Action = "Delete" })
+        </td>
+    </tr>
+}
+	</tbody>
+</table>

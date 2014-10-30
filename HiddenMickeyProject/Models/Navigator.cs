@@ -48,13 +48,23 @@ namespace HiddenMickeyProject.Models
 
         public string AreaName
         {
-            get { return areaName; }
+            get 
+            {
+                if (String.IsNullOrEmpty(this.areaName) && this.areas.Count > 0)
+                    return this.areas.First().AreaName;
+                return areaName;            
+            }
             set { areaName = String.IsNullOrEmpty(value) ? string.Empty : value.Trim(); }
         }
 
         public string LocationName
         {
-            get { return locationName; }
+            get
+            {
+                if (String.IsNullOrEmpty(this.locationName) && this.locations.Count > 0)
+                    return this.locations.First().LocationName;
+                return locationName;
+            }
             set { locationName = String.IsNullOrEmpty(value)?string.Empty:value.Trim(); }
         }
 

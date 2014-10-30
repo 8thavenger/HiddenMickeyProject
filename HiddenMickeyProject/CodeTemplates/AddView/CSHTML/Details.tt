@@ -61,23 +61,30 @@ if (!String.IsNullOrEmpty(mvcHost.MasterPageFile)) {
 #>
 <fieldset>
     <legend><#= mvcHost.ViewDataType.Name #></legend>
+	
+		<div class="col-xs-12 col-sm-6">
+	<table>
+		<tbody>
 <#
 foreach (ModelProperty property in GetModelProperties(mvcHost.ViewDataType)) {
     if (!property.IsPrimaryKey && property.Scaffold) {
 #>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.<#= property.ValueExpression #>)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.<#= property.ValueExpression #>)
-    </div>
+			<tr>
+				<td>
+					 @Html.DisplayNameFor(model => model.<#= property.ValueExpression #>)
+				</td>
+				<td>
+					@Html.DisplayFor(model => model.<#= property.ValueExpression #>)
+				</td>
+			</tr>
 <#
     }
 }
-#>
-</fieldset>
-<p>
+#>		
+		</tbody>
+	</table>
+		</div>
+		<div class="col-xs-12 col-sm-6">
 <#
 string pkName = GetPrimaryKeyName(mvcHost.ViewDataType);
 if (pkName != null) {
@@ -92,7 +99,9 @@ if (pkName != null) {
 <#
 }
 #>
-</p>
+</div>
+
+</fieldset>
 <#
 if(!mvcHost.IsPartialView && !mvcHost.IsContentPage) {
     ClearIndent();

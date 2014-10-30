@@ -26,13 +26,15 @@ namespace HiddenMickeyProject.Areas.Editor.Controllers
 
         public ViewResult Details(Navigator navigator)
         {
-            return View("Details", navigator);
+            Models.RegionViewModel model = Utilities.DataFactory.CreateRegion(navigator);
+            return View("Details", model);
         }
 
         [HttpGet]
         public ViewResult Edit(Navigator navigator)
         {
-            return View("Edit", navigator);
+            Models.RegionViewModel model = Utilities.DataFactory.CreateRegion(navigator);
+            return View("Edit", model);
         }
 
         [HttpPost]
@@ -51,8 +53,8 @@ namespace HiddenMickeyProject.Areas.Editor.Controllers
         [HttpGet]
         public ViewResult Create()
         {
-            Navigator navigator = new Navigator();
-            return View("Create", navigator);
+            RegionViewModel model = new RegionViewModel();
+            return View("Create", model);
         }
 
         [HttpPost]
@@ -96,7 +98,8 @@ namespace HiddenMickeyProject.Areas.Editor.Controllers
         [HttpGet]
         public ViewResult Delete(Navigator navigator)
         {
-            return View("Delete", navigator);
+            Models.RegionViewModel model = Utilities.DataFactory.CreateRegion(navigator);
+            return View("Delete", model);
         }
 
         [HttpPost]

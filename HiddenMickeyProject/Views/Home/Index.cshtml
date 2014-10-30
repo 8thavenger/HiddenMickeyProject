@@ -5,12 +5,12 @@
     ViewBag.Title = "Home Page";
 }
 @Html.ActionLink("Go to Editors", "Index", "Region", new { Area = "Editor" }, new  { })
-@Html.RouteLink("Go to Scavenger Hunt", "scavenger-hunt", new { RegionName="Epcot",AreaName="Future World"})
+@Html.RouteLink("Go to Scavenger Hunt", "scavenger-hunt", new { RegionName="Epcot"})
 <h1>Which Area are you visiting?</h1>
-<ul>
+<ul class="nav nav-pills">
     @foreach (Region item in Model)
     {
-       
+        <li>@Html.RouteLink(item.RegionName, "scavenger-hunt", new { RegionName=item.RegionName, AreaName=String.Empty})</li>       
     }
 </ul>
 

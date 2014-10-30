@@ -148,12 +148,14 @@
     <Compile Include="Areas\Editor\EditorAreaRegistration.cs" />
     <Compile Include="CachingDataSource.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DataFactory.cs" />
     <Compile Include="DI\NavigationBinder.cs" />
     <Compile Include="DI\RegionRepositoryProvider.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Navigator.cs" />
+    <Compile Include="Models\RegionViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -275,6 +277,10 @@
     <Content Include="Areas\Editor\Views\Web.config" />
     <Content Include="Areas\Editor\Views\Region\Create.cshtml" />
     <Content Include="Areas\Editor\Views\Area\Create.cshtml" />
+    <Content Include="Areas\Editor\Views\Region\Edit.cshtml" />
+    <Content Include="Areas\Editor\Views\Region\Details.cshtml" />
+    <Content Include="Areas\Editor\Views\Region\Delete.cshtml" />
+    <Content Include="Areas\Editor\Views\Region\Index.cshtml" />
     <None Include="CodeTemplates\AddView\CSHTML\Create.tt" />
     <None Include="CodeTemplates\AddView\CSHTML\Delete.tt" />
     <None Include="CodeTemplates\AddView\CSHTML\Details.tt" />

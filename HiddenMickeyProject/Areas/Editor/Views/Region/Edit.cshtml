@@ -1,12 +1,14 @@
-﻿@model HiddenMickeyProject.Data.Region
+﻿@model HiddenMickeyProject.Models.RegionViewModel
 @{
-    ViewBag.Title = "Create Region";
+    ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Create Region</h2>
+<h2>
+    Edit</h2>
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.RegionId);
     <fieldset>
         <legend>Create Region</legend>
         <div class="col-xs-12 col-sm-6">
@@ -21,7 +23,7 @@
                             @Html.ValidationMessageFor(model => model.RegionName)
                         </td>
                     </tr>
-                <tbody>
+                    <tbody>
             </table>
         </div>
         <div class="col-xs-12 col-sm-6">
@@ -30,7 +32,7 @@
                     @Html.ActionLink("Back to List", "Index")
                 </li>
                 <li>
-                    <input type="submit" value="Create" />
+                    <input type="submit" value="Update" />
                 </li>
             </ul>
         </div>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HiddenMickeyProject.Data;
 
 namespace HiddenMickeyProject.DI
 {
@@ -24,12 +25,13 @@ namespace HiddenMickeyProject.DI
             navigator.LocationName = controllerContext.RouteData.Values["LocationName"] as string;
 
             navigator.Regions.AddRange(this.repository.Regions());
-            navigator.RegionId = navigator.Regions.DefaultIfEmpty(new Data.Region()).FirstOrDefault(r => r.RegionName == navigator.RegionName).RegionId;
+            navigator.RegionId = navigator.Regions.DefaultIfEmpty(new Data.Region()).First(r => r.RegionName == navigator.RegionName).RegionId;
             
             navigator.Areas.AddRange(this.repository.GetAreasByRegionId(navigator.RegionId));
             if (!String.IsNullOrEmpty(navigator.AreaName))
             {
-                navigator.AreaId = navigator.Areas.DefaultIfEmpty(new Data.Area()).FirstOrDefault(a => a.AreaName == navigator.AreaName).AreaId;
+                Area area = navigator.Areas.FirstOrDefault<Area>(a => String.Compare(a.AreaName, navigator.AreaName, true) == 0);
+                navigator.AreaId = area.AreaId;
                 navigator.Locations.AddRange(this.repository.GetLocationsByAreaId(navigator.AreaId));
             }
 
