@@ -17,7 +17,8 @@ namespace HiddenMickeyProject.Utilities
             area.RegionId = navigator.RegionId;
             area.AreaId = navigator.AreaId;
             area.AreaName = navigator.AreaName;
-            //area.Locations.AddRange(navigator.Areas);
+            area.RegionName = navigator.RegionName;
+            area.Locations.AddRange(navigator.Locations.Select(location => new LocationViewModel() { AreaId = area.AreaId, LocationId = location.LocationId, LocationName = location.LocationName, RegionName = navigator.RegionName, AreaName = area.AreaName }));
             return area;
         }
 
@@ -27,7 +28,9 @@ namespace HiddenMickeyProject.Utilities
             location.LocationId = navigator.LocationId;
             location.AreaId = navigator.AreaId;
             location.LocationName = navigator.LocationName;
-            //area.Locations.AddRange(navigator.Areas);
+            location.AreaName = navigator.AreaName;
+            location.RegionName = navigator.RegionName;
+            location.Entries.AddRange(navigator.Entries);
             return location;
         }
 
@@ -36,7 +39,7 @@ namespace HiddenMickeyProject.Utilities
             RegionViewModel region = new RegionViewModel();
             region.RegionId = navigator.RegionId;
             region.RegionName = navigator.RegionName;
-            region.Areas.AddRange(navigator.Areas);
+            region.Areas.AddRange(navigator.Areas.Select(area => new AreaViewModel() { RegionId = region.RegionId, RegionName = region.RegionName, AreaId = area.AreaId, AreaName= area.AreaName }));
             return region;
         }
 

@@ -283,6 +283,11 @@
     <Content Include="Areas\Editor\Views\Region\Details.cshtml" />
     <Content Include="Areas\Editor\Views\Region\Delete.cshtml" />
     <Content Include="Areas\Editor\Views\Region\Index.cshtml" />
+    <Content Include="Areas\Editor\Views\Region\Areas.cshtml" />
+    <Content Include="Areas\Editor\Views\Area\Edit.cshtml" />
+    <Content Include="Areas\Editor\Views\Area\Details.cshtml" />
+    <Content Include="Areas\Editor\Views\Area\Locations.cshtml" />
+    <Content Include="Areas\Editor\Views\Area\Delete.cshtml" />
     <None Include="CodeTemplates\AddView\CSHTML\Create.tt" />
     <None Include="CodeTemplates\AddView\CSHTML\Delete.tt" />
     <None Include="CodeTemplates\AddView\CSHTML\Details.tt" />
@@ -294,6 +299,10 @@
     <Content Include="Content\Site.less">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Content\Computer.less" />
+    <None Include="Content\LargeScreen.less" />
+    <None Include="Content\Phone.less" />
+    <None Include="Content\Tablet.less" />
     <None Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="fonts\glyphicons-halflings-regular.ttf" />
     <None Include="fonts\glyphicons-halflings-regular.woff" />

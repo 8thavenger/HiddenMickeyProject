@@ -1,0 +1,25 @@
+﻿@model IEnumerable<HiddenMickeyProject.Models.AreaViewModel>
+<table>
+	<thead>
+    <tr>
+        <th>
+            Area Name
+        </th>
+        <th></th>
+    </tr>
+	</thead>
+	<tbody>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AreaName)
+        </td>
+        <td>
+            @Html.RouteLink("Edit", "area_default", new { RegionName = item.RegionName, AreaName=item.AreaName, Action = "Edit" }, new { }) |
+            @Html.RouteLink("Details", "area_default", new { RegionName = item.RegionName, AreaName = item.AreaName, Action = "Details" }, new { })  |
+            @Html.RouteLink("Delete", "area_default", new { RegionName = item.RegionName, AreaName = item.AreaName, Action = "Delete" }, new { })
+        </td>
+    </tr>
+}
+	</tbody>
+</table>

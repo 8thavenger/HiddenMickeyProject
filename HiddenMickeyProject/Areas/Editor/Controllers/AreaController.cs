@@ -18,6 +18,28 @@ namespace HiddenMickeyProject.Areas.Editor.Controllers
         }
 
         [HttpGet]
+        public ViewResult Create(Navigator navigator)
+        {
+            AreaViewModel model = Utilities.ObjectFactory.CreateArea(navigator);
+            model.AreaName = String.Empty;
+            return View("Create", model);
+        }
+
+        [HttpPost]
+        public ActionResult Create(AreaViewModel area)
+        {
+            if (this.repository.SaveArea(area))
+            {
+                return RedirectToRoute("region_default", new { RegionName = area.RegionName, action = "Details" });
+            }
+            else
+            {
+                return View("Create", area);
+            }
+        }
+
+
+        [HttpGet]
         public ViewResult Details(Navigator navigator)
         {
             return View("Details",navigator);
@@ -26,40 +48,41 @@ namespace HiddenMickeyProject.Areas.Editor.Controllers
         [HttpGet]
         public ViewResult Edit(Navigator navigator)
         {
-            return View("Edit",navigator);
+            AreaViewModel model = Utilities.ObjectFactory.CreateArea(navigator);
+            return View("Edit",model);
         }
 
         [HttpPost]
-        public RedirectToRouteResult Edit(Area area, string regionName)
+        public ActionResult Edit(AreaViewModel area)
         {
-            this.repository.SaveArea(area);
-            return RedirectToRoute("region_default", new { RegionName = regionName, Action="Details"});
-        }
-
-        [HttpGet]
-        public ActionResult AddLocation(Navigator navigator)
-        {
-            return View("AddLocation",navigator);
-        }
-
-        [HttpPost]
-        public RedirectToRouteResult AddLocation(Location location, string regionName, string areaName)
-        {
-            this.repository.SaveLocation(location);
-            return RedirectToRoute("area_default", new { RegionName = regionName, AreaName= areaName });
+            if (this.repository.SaveArea(area))
+            {
+                return RedirectToRoute("region_default", new { RegionName = area.RegionName, Action = "Details" });
+            }
+            else
+            {
+                return View("Edit", area);
+            }
         }
 
         [HttpGet]
         public ActionResult Delete(Navigator navigator)
         {
-            return View("Delete",navigator);
+            AreaViewModel model = Utilities.ObjectFactory.CreateArea(navigator);
+            return View("Delete",model);
         }
 
         [HttpPost]
-        public RedirectToRouteResult Delete(Area area, string regionName)
+        public ActionResult Delete(AreaViewModel model)
         {
-            this.repository.DeleteArea(area);
-            return RedirectToRoute("region_default", new { RegionName = regionName, Action="Details"});
+            if (this.repository.DeleteArea(model))
+            {
+                return RedirectToRoute("region_default", new { RegionName = model.RegionName, Action = "Details" });
+            }
+            else
+            {
+                return View("Delete", model);
+            }
         }
 
     }

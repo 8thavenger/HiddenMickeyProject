@@ -8,8 +8,8 @@ namespace HiddenMickeyProject.Models
 {
     public class RegionViewModel : Region
     {
-        private List<Area> areas = new List<Area>();
-        public List<Area> Areas
+        private List<AreaViewModel> areas = new List<AreaViewModel>();
+        public List<AreaViewModel> Areas
         {
             get { return this.areas; }
         }

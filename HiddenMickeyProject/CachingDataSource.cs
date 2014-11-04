@@ -92,8 +92,8 @@ namespace HiddenMickeyProject
             {
                 string key = string.Format(AREA_KEY, area.RegionId);
                 List<Area> areas = HttpContext.Current.Cache[key] as List<Area>;
-                Area current = areas.DefaultIfEmpty(null).First(a => a.AreaId == area.AreaId);
-                if (current != null)
+                Area current = areas.FirstOrDefault(a => a.AreaId == area.AreaId);
+                if (current!=null)
                     areas.Remove(current);
                 areas.Add(area);
                 HttpContext.Current.Cache.Insert(key, areas, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));
@@ -179,7 +179,7 @@ namespace HiddenMickeyProject
             {
                 string key = string.Format(AREA_KEY, area.RegionId);
                 List<Area> areas = HttpContext.Current.Cache[key] as List<Area>;
-                Area current = areas.DefaultIfEmpty(null).First(a=>a.AreaId == area.AreaId);
+                Area current = areas.FirstOrDefault(a=>a.AreaId == area.AreaId);
                 if(current != null)
                     areas.Remove(current);
                 HttpContext.Current.Cache.Insert(key, areas, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 20, 0));

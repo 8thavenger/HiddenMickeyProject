@@ -21,7 +21,19 @@
         </table>
     </div>
     <div class="col-xs-12 col-sm-6">
-        @Html.RouteLink("Edit", "region_default", new { RegionName = Model.RegionName, Action = "Edit" });
-        @Html.ActionLink("Back to List", "Index")
+        <ul>
+                <li>
+                    @Html.RouteLink("Add Area", "area_default", new { RegionName = Model.RegionName, Action = "Create" }, new { })
+                </li>
+                <li>
+                    @Html.RouteLink("Edit", "region_default", new { RegionName = Model.RegionName, Action = "Edit" })
+                </li>
+                <li>
+                    @Html.ActionLink("Back to List", "Index")
+                </li>
+        </ul>
     </div>
 </fieldset>
+<div>
+    @Html.Partial("Areas", Model.Areas)
+</div>
