@@ -90,7 +90,7 @@ namespace HiddenMickeyProject.Data
                 using (MySqlCommand cmd = new MySqlCommand("SelectAreaById", cn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("Region_Id", MySqlDbType.Int32).Value = areaId;
+                    cmd.Parameters.Add("Area_Id", MySqlDbType.Int32).Value = areaId;
                     cn.Open();
                     using (MySqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection))
                     {
@@ -127,7 +127,7 @@ namespace HiddenMickeyProject.Data
             List<Entry> result = new List<Entry>();
             using (MySqlConnection cn = new MySqlConnection(this.connectionString))
             {
-                using (MySqlCommand cmd = new MySqlCommand("GetLocationsByAreaId", cn))
+                using (MySqlCommand cmd = new MySqlCommand("GetEntriesByLocationId", cn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("Location_Id", MySqlDbType.Int32).Value = locationId;
