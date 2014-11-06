@@ -23,8 +23,13 @@ namespace HiddenMickeyProject.DI
             string regionName = controllerContext.RouteData.Values["RegionName"] as string;
             string areaName = controllerContext.RouteData.Values["AreaName"] as string;
             string locationName = controllerContext.RouteData.Values["LocationName"] as string;
+            string value = controllerContext.RouteData.Values["EntryId"] as string;
+            int entryId = 0;
 
-            Models.Navigator navigator = Utilities.ObjectFactory.GetNavigator(regionName, areaName, locationName);
+            if (!String.IsNullOrEmpty(value))
+                Int32.TryParse(value, out entryId);
+
+            Models.Navigator navigator = Utilities.ObjectFactory.GetNavigator(regionName, areaName, locationName, entryId);
 
             return navigator;
         }

@@ -1,0 +1,75 @@
+﻿@model HiddenMickeyProject.Models.EntryViewModel
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>
+    Delete</h2>
+<h3>
+    Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>EntryViewModel</legend>
+    <div class="col-xs-12 col-sm-6">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        Region Name
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.RegionName)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Area Name
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.AreaName)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Location Name
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.LocationName)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Clue
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Clue)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Hint
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Hint)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <ul>
+            <li>
+                    @Html.RouteLink("Back to List", "location_default", new { Action = "Details", RegionName = Model.RegionName, AreaName = Model.AreaName, LocationName = Model.LocationName }, new { })
+            </li>
+            <li>
+                @using (Html.BeginForm())
+                {
+                    @Html.HiddenFor(model => model.LocationId)
+                    @Html.HiddenFor(model => model.LocationName)
+                    @Html.HiddenFor(model => model.AreaName)
+                    @Html.HiddenFor(model => model.RegionName)
+                    <input type="submit" value="Delete Entry" />
+                }
+            </li>
+        </ul>
+    </div>
+</fieldset>

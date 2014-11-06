@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="f6d95ae7-a564-4dc7-abe2-52ccc0ce4230" name="Kevin@OFFICE-DESKTOP 2014-11-06 08:45:19" runUser="Office-Desktop\Kevin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="f540f6a2-4815-4dba-91ef-19b03ca7f34c">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="D:\Kevin\GitHub\HiddenMickeyProject\TestResults" useDefaultDeploymentRoot="false" runDeploymentRoot="Kevin_OFFICE-DESKTOP 2014-11-06 08_45_19">
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\dotless.1.4.1.0\lib\dotless.Core.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.WebPages.Razor.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\WebGrease.1.1.0\lib\WebGrease.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\MySql.Data.6.9.3\lib\net40\MySql.Data.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Debug\HiddenMickeyProject.Data.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.WebPages.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\Microsoft.Web.Infrastructure.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.Helpers.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.WebPages.Deployment.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\Ninject.Web.Common.3.2.0.0\lib\net40-full\Ninject.Web.Common.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.Razor.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\HiddenMickeyProject.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\Ninject.3.2.0.0\lib\net40\Ninject.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Net.Http.WebRequest.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\Ninject.MVC4.3.2.1.0\lib\net40-full\Ninject.Web.Mvc.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\MySql.Web.6.9.3\lib\net40\MySql.Web.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Net.Http.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific>
+        <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+          <AssemblyResolution>
+            <TestDirectory useLoadContext="true" />
+          </AssemblyResolution>
+        </UnitTestRunConfig>
+        <WebTestRunConfiguration testTypeId="4e7599fa-5ecb-43e9-a887-cd63cf72d207">
+          <Browser name="Internet Explorer 7.0">
+            <Headers>
+              <Header name="User-Agent" value="Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)" />
+              <Header name="Accept" value="*/*" />
+              <Header name="Accept-Language" value="{{$IEAcceptLanguage}}" />
+              <Header name="Accept-Encoding" value="GZIP" />
+            </Headers>
+          </Browser>
+        </WebTestRunConfiguration>
+      </TestTypeSpecific>
+      <AgentRule name="LocalMachineDefaultRole">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-11-06T08:45:19.7738320-05:00" queuing="2014-11-06T08:45:20.2568596-05:00" start="2014-11-06T08:45:20.2818611-05:00" finish="2014-11-06T08:45:21.0869071-05:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="3" executed="3" error="0" failed="3" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GivenEntryViewModelCreateNewEntry" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="519e768e-f18a-d57e-6094-182564bf588e">
+      <Execution id="20add574-3487-43aa-82bd-305c1c4cac9e" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.EntryControllerTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GivenEntryViewModelCreateNewEntry" />
+    </UnitTest>
+    <UnitTest name="GivenEntryViewModelDeleteEntry" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="d5a8a52b-4990-b9e5-0bf0-f383cbe38637">
+      <Execution id="fa9305d7-b818-44d6-816e-dc33427fffd0" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.EntryControllerTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GivenEntryViewModelDeleteEntry" />
+    </UnitTest>
+    <UnitTest name="GivenEntryViewModelUpdateEntry" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="5625c407-9a34-81ef-4f92-42a6527a3977">
+      <Execution id="1e13a20f-15fb-4a95-a9c3-c226e2fd5557" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.EntryControllerTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GivenEntryViewModelUpdateEntry" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="d5a8a52b-4990-b9e5-0bf0-f383cbe38637" executionId="fa9305d7-b818-44d6-816e-dc33427fffd0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5625c407-9a34-81ef-4f92-42a6527a3977" executionId="1e13a20f-15fb-4a95-a9c3-c226e2fd5557" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="519e768e-f18a-d57e-6094-182564bf588e" executionId="20add574-3487-43aa-82bd-305c1c4cac9e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="fa9305d7-b818-44d6-816e-dc33427fffd0" testId="d5a8a52b-4990-b9e5-0bf0-f383cbe38637" testName="GivenEntryViewModelDeleteEntry" computerName="OFFICE-DESKTOP" duration="00:00:00.3308865" startTime="2014-11-06T08:45:20.3018622-05:00" endTime="2014-11-06T08:45:21.0199033-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fa9305d7-b818-44d6-816e-dc33427fffd0">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;Test Region&gt;. Actual:&lt;(null)&gt;. </Message>
+          <StackTrace>   at HiddenMickeyProject.Tests.EntryControllerTest.GivenEntryViewModelDeleteEntry() in D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Tests\EntryControllerTest.cs:line 178
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1e13a20f-15fb-4a95-a9c3-c226e2fd5557" testId="5625c407-9a34-81ef-4f92-42a6527a3977" testName="GivenEntryViewModelUpdateEntry" computerName="OFFICE-DESKTOP" duration="00:00:00.0179099" startTime="2014-11-06T08:45:21.0219034-05:00" endTime="2014-11-06T08:45:21.0489049-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1e13a20f-15fb-4a95-a9c3-c226e2fd5557">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method HiddenMickeyProject.Tests.EntryControllerTest.GivenEntryViewModelUpdateEntry threw exception: 
+Rhino.Mocks.Exceptions.ExpectationViolationException: INavigationRepository.SaveEntry(null); Expected #0, Actual #1.</Message>
+          <StackTrace>    at Rhino.Mocks.MethodRecorders.UnorderedMethodRecorder.DoGetRecordedExpectation(IInvocation invocation, Object proxy, MethodInfo method, Object[] args)
+   at Rhino.Mocks.MethodRecorders.MethodRecorderBase.GetRecordedExpectation(IInvocation invocation, Object proxy, MethodInfo method, Object[] args)
+   at Rhino.Mocks.Impl.ReplayMockState.DoMethodCall(IInvocation invocation, MethodInfo method, Object[] args)
+   at Rhino.Mocks.Impl.ReplayMockState.MethodCall(IInvocation invocation, MethodInfo method, Object[] args)
+   at Rhino.Mocks.MockRepository.MethodCall(IInvocation invocation, Object proxy, MethodInfo method, Object[] args)
+   at Rhino.Mocks.Impl.Invocation.Actions.RegularInvocation.PerformAgainst(IInvocation invocation)
+   at Rhino.Mocks.Impl.RhinoInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.INavigationRepositoryProxy0c31b841c43f4221a7ca3907b350cf5d.INavigationRepository.SaveEntry(Entry entry)
+   at HiddenMickeyProject.Areas.Editor.Controllers.EntryController.Edit(EntryViewModel model) in D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\Areas\Editor\Controllers\EntryController.cs:line 67
+   at HiddenMickeyProject.Tests.EntryControllerTest.GivenEntryViewModelUpdateEntry() in D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Tests\EntryControllerTest.cs:line 213
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="20add574-3487-43aa-82bd-305c1c4cac9e" testId="519e768e-f18a-d57e-6094-182564bf588e" testName="GivenEntryViewModelCreateNewEntry" computerName="OFFICE-DESKTOP" duration="00:00:00.0038052" startTime="2014-11-06T08:45:21.0549053-05:00" endTime="2014-11-06T08:45:21.0649058-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="20add574-3487-43aa-82bd-305c1c4cac9e">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;Test Region&gt;. Actual:&lt;(null)&gt;. </Message>
+          <StackTrace>   at HiddenMickeyProject.Tests.EntryControllerTest.GivenEntryViewModelCreateNewEntry() in D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Tests\EntryControllerTest.cs:line 115
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -11,6 +11,22 @@ namespace HiddenMickeyProject.Utilities
 {
     public static class ObjectFactory
     {
+        public static EntryViewModel CreateEntry(Models.Navigator navigator)
+        {
+            EntryViewModel model = new EntryViewModel();
+            if (navigator.Entry != null)
+            {
+                model.EntryId = navigator.Entry.EntryId;
+                model.Clue = navigator.Entry.Clue;
+                model.Hint = navigator.Entry.Hint;
+            }
+            model.LocationId = navigator.LocationId;
+            model.LocationName = navigator.LocationName;
+            model.AreaName = navigator.AreaName;
+            model.RegionName = navigator.RegionName;
+            return model;
+        }
+
         public static AreaViewModel CreateArea(Models.Navigator navigator)
         {
             AreaViewModel area = new AreaViewModel();
@@ -43,13 +59,14 @@ namespace HiddenMickeyProject.Utilities
             return region;
         }
 
-        public static Navigator GetNavigator(string regionName, string areaName, string locationName)
+        public static Navigator GetNavigator(string regionName, string areaName, string locationName, int entryId=0)
         {
             Data.INavigationRepository repository = GetRepository();
             Models.Navigator navigator = new Models.Navigator();
             navigator.RegionName = regionName;
             navigator.AreaName = areaName;
             navigator.LocationName = locationName;
+            navigator.EntryId = entryId;
             navigator.Regions.AddRange(repository.Regions());
             navigator.RegionId = navigator.Regions.DefaultIfEmpty(new Data.Region()).First(r => r.RegionName == navigator.RegionName).RegionId;
 

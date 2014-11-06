@@ -1,0 +1,81 @@
+﻿@model HiddenMickeyProject.Models.EntryViewModel
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Create</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.LocationId)
+    @Html.HiddenFor(model => model.LocationName)
+    @Html.HiddenFor(model => model.AreaName)
+    @Html.HiddenFor(model => model.RegionName)
+    <fieldset>
+        <legend>Create Entry</legend>
+        <div class="col-xs-12 col-sm-6">
+            <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                <tbody>
+                    <tr>
+                        <td>
+                            Region Name
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.RegionName)
+                            @Html.ValidationMessageFor(model => model.RegionName)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.LabelFor(model => model.AreaName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.AreaName)
+                            @Html.ValidationMessageFor(model => model.AreaName)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.LabelFor(model => model.LocationName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.LocationName)
+                            @Html.ValidationMessageFor(model => model.LocationName)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.LabelFor(model => model.Clue)
+                        </td>
+                        <td>
+                            @Html.TextAreaFor(model => model.Clue)
+                            @Html.ValidationMessageFor(model => model.Clue)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.LabelFor(model => model.Hint)
+                        </td>
+                        <td>
+                            @Html.TextAreaFor(model => model.Hint)
+                            @Html.ValidationMessageFor(model => model.Hint)
+                        </td>
+                    </tr>
+                    <tbody>
+            </table>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <ul>
+                <li>
+                    @Html.RouteLink("Back to List", "location_default", new { Action = "Details", RegionName = Model.RegionName, AreaName = Model.AreaName, LocationName = Model.LocationName }, new { })
+                </li>
+                <li>
+                    <input type="submit" value="Create Entry" />
+                </li>
+            </ul>
+        </div>
+    </fieldset>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

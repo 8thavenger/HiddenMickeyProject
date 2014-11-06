@@ -43,7 +43,7 @@ namespace HiddenMickeyProject.Areas.Editor.Controllers
             if(this.repository.SaveRegon(region))
                 return RedirectToAction("Index");
             else{
-                Navigator navigator = Utilities.ObjectFactory.GetNavigator(region.RegionName, string.Empty, string.Empty);
+                Navigator navigator = Utilities.ObjectFactory.GetNavigator(region.RegionName, string.Empty, string.Empty,0);
                 return RedirectToAction("Edit", new { navigator = navigator });
             }
         }
@@ -62,7 +62,7 @@ namespace HiddenMickeyProject.Areas.Editor.Controllers
                 return RedirectToAction("Index");
             else
             {
-                Navigator navigator = Utilities.ObjectFactory.GetNavigator(region.RegionName, string.Empty, string.Empty);
+                Navigator navigator = Utilities.ObjectFactory.GetNavigator(region.RegionName, string.Empty, string.Empty,0);
                 return RedirectToAction("Create", new { navigator = navigator });
             }
         }

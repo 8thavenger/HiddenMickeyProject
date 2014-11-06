@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="f8da32c8-d79e-4c86-9aa5-9df89b8ac1ce" name="Kevin@OFFICE-DESKTOP 2014-11-06 08:37:09" runUser="Office-Desktop\Kevin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="f540f6a2-4815-4dba-91ef-19b03ca7f34c">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="D:\Kevin\GitHub\HiddenMickeyProject\TestResults" useDefaultDeploymentRoot="false" runDeploymentRoot="Kevin_OFFICE-DESKTOP 2014-11-06 08_37_09">
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\dotless.1.4.1.0\lib\dotless.Core.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.WebPages.Razor.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\WebGrease.1.1.0\lib\WebGrease.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\MySql.Data.6.9.3\lib\net40\MySql.Data.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Debug\HiddenMickeyProject.Data.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.WebPages.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\Microsoft.Web.Infrastructure.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.Helpers.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.WebPages.Deployment.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\Ninject.Web.Common.3.2.0.0\lib\net40-full\Ninject.Web.Common.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.Razor.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\HiddenMickeyProject.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\Ninject.3.2.0.0\lib\net40\Ninject.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Net.Http.WebRequest.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\Ninject.MVC4.3.2.1.0\lib\net40-full\Ninject.Web.Mvc.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\MySql.Web.6.9.3\lib\net40\MySql.Web.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Net.Http.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific>
+        <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+          <AssemblyResolution>
+            <TestDirectory useLoadContext="true" />
+          </AssemblyResolution>
+        </UnitTestRunConfig>
+        <WebTestRunConfiguration testTypeId="4e7599fa-5ecb-43e9-a887-cd63cf72d207">
+          <Browser name="Internet Explorer 7.0">
+            <Headers>
+              <Header name="User-Agent" value="Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)" />
+              <Header name="Accept" value="*/*" />
+              <Header name="Accept-Language" value="{{$IEAcceptLanguage}}" />
+              <Header name="Accept-Encoding" value="GZIP" />
+            </Headers>
+          </Browser>
+        </WebTestRunConfiguration>
+      </TestTypeSpecific>
+      <AgentRule name="LocalMachineDefaultRole">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-11-06T08:37:09.4197853-05:00" queuing="2014-11-06T08:37:09.7918066-05:00" start="2014-11-06T08:37:09.8298088-05:00" finish="2014-11-06T08:37:10.6288545-05:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="4" executed="4" passed="1" error="0" failed="3" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GivenEntryViewModelCreateNewEntry" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="519e768e-f18a-d57e-6094-182564bf588e">
+      <Execution id="3e46488a-1faa-49bd-af48-91a3cd95841b" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.EntryControllerTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GivenEntryViewModelCreateNewEntry" />
+    </UnitTest>
+    <UnitTest name="GivenNavigatorShowCreateEntryView" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="06c377e4-3f3f-b873-f56c-9f54e106e0fe">
+      <Execution id="630d6f98-e18b-4abd-af57-77ea19960564" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.EntryControllerTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GivenNavigatorShowCreateEntryView" />
+    </UnitTest>
+    <UnitTest name="GivenEntryViewModelDeleteEntry" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="d5a8a52b-4990-b9e5-0bf0-f383cbe38637">
+      <Execution id="44da000a-b360-470d-ad51-d3f81beafb7d" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.EntryControllerTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GivenEntryViewModelDeleteEntry" />
+    </UnitTest>
+    <UnitTest name="GivenEntryViewModelUpdateEntry" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="5625c407-9a34-81ef-4f92-42a6527a3977">
+      <Execution id="6d061887-a0ed-4b17-ae00-4cde5b12a3c1" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.EntryControllerTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GivenEntryViewModelUpdateEntry" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="d5a8a52b-4990-b9e5-0bf0-f383cbe38637" executionId="44da000a-b360-470d-ad51-d3f81beafb7d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5625c407-9a34-81ef-4f92-42a6527a3977" executionId="6d061887-a0ed-4b17-ae00-4cde5b12a3c1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="519e768e-f18a-d57e-6094-182564bf588e" executionId="3e46488a-1faa-49bd-af48-91a3cd95841b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="06c377e4-3f3f-b873-f56c-9f54e106e0fe" executionId="630d6f98-e18b-4abd-af57-77ea19960564" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="44da000a-b360-470d-ad51-d3f81beafb7d" testId="d5a8a52b-4990-b9e5-0bf0-f383cbe38637" testName="GivenEntryViewModelDeleteEntry" computerName="OFFICE-DESKTOP" duration="00:00:00.3547224" startTime="2014-11-06T08:37:09.8578104-05:00" endTime="2014-11-06T08:37:10.5478499-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="44da000a-b360-470d-ad51-d3f81beafb7d">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;location_default&gt;. Actual:&lt;&gt;. </Message>
+          <StackTrace>   at HiddenMickeyProject.Tests.EntryControllerTest.GivenEntryViewModelDeleteEntry() in D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Tests\EntryControllerTest.cs:line 175
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6d061887-a0ed-4b17-ae00-4cde5b12a3c1" testId="5625c407-9a34-81ef-4f92-42a6527a3977" testName="GivenEntryViewModelUpdateEntry" computerName="OFFICE-DESKTOP" duration="00:00:00.0061821" startTime="2014-11-06T08:37:10.5528502-05:00" endTime="2014-11-06T08:37:10.5628507-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d061887-a0ed-4b17-ae00-4cde5b12a3c1">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;location_default&gt;. Actual:&lt;&gt;. </Message>
+          <StackTrace>   at HiddenMickeyProject.Tests.EntryControllerTest.GivenEntryViewModelUpdateEntry() in D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Tests\EntryControllerTest.cs:line 216
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3e46488a-1faa-49bd-af48-91a3cd95841b" testId="519e768e-f18a-d57e-6094-182564bf588e" testName="GivenEntryViewModelCreateNewEntry" computerName="OFFICE-DESKTOP" duration="00:00:00.0272323" startTime="2014-11-06T08:37:10.5668510-05:00" endTime="2014-11-06T08:37:10.5978527-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3e46488a-1faa-49bd-af48-91a3cd95841b">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;location_default&gt;. Actual:&lt;&gt;. </Message>
+          <StackTrace>   at HiddenMickeyProject.Tests.EntryControllerTest.GivenEntryViewModelCreateNewEntry() in D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Tests\EntryControllerTest.cs:line 113
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="630d6f98-e18b-4abd-af57-77ea19960564" testId="06c377e4-3f3f-b873-f56c-9f54e106e0fe" testName="GivenNavigatorShowCreateEntryView" computerName="OFFICE-DESKTOP" duration="00:00:00.0035584" startTime="2014-11-06T08:37:10.5998528-05:00" endTime="2014-11-06T08:37:10.6088534-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="630d6f98-e18b-4abd-af57-77ea19960564">
+    </UnitTestResult>
+  </Results>
+</TestRun>

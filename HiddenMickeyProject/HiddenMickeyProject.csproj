@@ -144,6 +144,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Editor\Controllers\AreaController.cs" />
+    <Compile Include="Areas\Editor\Controllers\EntryController.cs" />
     <Compile Include="Areas\Editor\Controllers\LocationController.cs" />
     <Compile Include="Areas\Editor\Controllers\RegionController.cs" />
     <Compile Include="Areas\Editor\EditorAreaRegistration.cs" />
@@ -295,6 +296,10 @@
     <Content Include="Areas\Editor\Views\Location\Entries.cshtml" />
     <Content Include="Areas\Editor\Views\Location\Details.cshtml" />
     <Content Include="Areas\Editor\Views\Location\Delete.cshtml" />
+    <Content Include="Areas\Editor\Views\Entry\Edit.cshtml" />
+    <Content Include="Areas\Editor\Views\Entry\Create.cshtml" />
+    <Content Include="Areas\Editor\Views\Entry\Details.cshtml" />
+    <Content Include="Areas\Editor\Views\Entry\Delete.cshtml" />
     <None Include="CodeTemplates\AddView\CSHTML\Create.tt" />
     <None Include="CodeTemplates\AddView\CSHTML\Delete.tt" />
     <None Include="CodeTemplates\AddView\CSHTML\Details.tt" />
@@ -320,7 +325,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Editor\Models\" />
-    <Folder Include="Areas\Editor\Views\Entry\" />
     <Folder Include="Areas\Editor\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>

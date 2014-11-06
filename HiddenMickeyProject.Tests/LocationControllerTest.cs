@@ -121,7 +121,7 @@ namespace HiddenMickeyProject.Tests
         ///A test for Create
         ///</summary>
         [TestMethod()]
-        public void GivenNavigatorShowCreateView()
+        public void GivenNavigatorShowCreateLocationView()
         {
             INavigationRepository repository = GenerateRepository();
             LocationController target = new LocationController(repository);  

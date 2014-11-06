@@ -162,7 +162,7 @@ namespace HiddenMickeyProject
             if (this.repository.SaveEntry(entry))
             {
                 List<Entry> entries = this.GetEntriesByLocationId(entry.LocationId).ToList();
-                Entry current = entries.DefaultIfEmpty(null).First(e=>e.EntryId==entry.EntryId);
+                Entry current = entries.FirstOrDefault(e=>e.EntryId==entry.EntryId);
                 if (current != null)
                     entries.Remove(current);
                 entries.Add(entry);
@@ -208,7 +208,7 @@ namespace HiddenMickeyProject
             if (this.repository.DeleteEntry(entry))
             {
                 List<Entry> entries = this.GetEntriesByLocationId(entry.LocationId).ToList();
-                Entry current = entries.DefaultIfEmpty(null).First(e => e.EntryId == entry.EntryId);
+                Entry current = entries.FirstOrDefault(e => e.EntryId == entry.EntryId);
                 if (current != null)
                     entries.Remove(current);
                 string key = string.Format(ENTRY_KEY, entry.LocationId);

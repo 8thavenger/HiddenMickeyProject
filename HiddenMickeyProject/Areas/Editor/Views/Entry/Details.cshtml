@@ -1,0 +1,66 @@
+﻿@model HiddenMickeyProject.Models.EntryViewModel
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>
+    Details</h2>
+<fieldset>
+    <legend>EntryViewModel</legend>
+    <div class="col-xs-12 col-sm-6">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.LocationName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.LocationName)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.RegionName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.RegionName)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.AreaName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.AreaName)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Clue)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Clue)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(model => model.Hint)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.Hint)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <ul>
+            <li>
+                @Html.RouteLink("Edit", "entry_default", new { Action = "Edit", RegionName = Model.RegionName, AreaName = Model.AreaName, LocationName = Model.LocationName, EntryId= Model.EntryId }, new { });
+            </li>
+            <li>
+                    @Html.RouteLink("Back to List", "location_default", new { Action = "Details", RegionName = Model.RegionName, AreaName = Model.AreaName, LocationName = Model.LocationName }, new { })
+            </li>
+        </ul>
+    </div>
+</fieldset>

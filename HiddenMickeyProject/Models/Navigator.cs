@@ -20,6 +20,13 @@ namespace HiddenMickeyProject.Models
         private int regionId;
         private int areaId;
         private int locationId;
+        private int entryId;
+
+        public int EntryId
+        {
+            get { return entryId; }
+            set { entryId = value; }
+        }        
 
         public int RegionId
         {
@@ -86,6 +93,14 @@ namespace HiddenMickeyProject.Models
         public List<Entry> Entries
         {
             get { return this.entries; }
+        }
+
+        public Entry Entry
+        {
+            get
+            {
+                return this.entries.FirstOrDefault(e => e.EntryId == this.entryId);
+            }
         }
     }
 }

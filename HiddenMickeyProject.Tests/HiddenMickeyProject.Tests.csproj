@@ -133,8 +133,10 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntryControllerTest.cs" />
     <Compile Include="LocationControllerTest.cs" />
     <Compile Include="MysqlSourceTest.cs" />
+    <Compile Include="ObjectFactoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
