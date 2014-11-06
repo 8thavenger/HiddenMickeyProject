@@ -1,0 +1,61 @@
+﻿@model HiddenMickeyProject.Models.LocationViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Location</legend>
+	
+		<div class="col-xs-12 col-sm-6">
+	<table>
+		<tbody>
+			<tr>
+				<td>
+					 Region Name
+				</td>
+				<td>
+					@Html.DisplayFor(model => model.RegionName)
+				</td>
+			</tr>
+			<tr>
+				<td>
+					 Area Name
+				</td>
+				<td>
+					@Html.DisplayFor(model => model.AreaName)
+				</td>
+			</tr>
+			<tr>
+				<td>
+					 Location Name
+				</td>
+				<td>
+					@Html.DisplayFor(model => model.LocationName)
+				</td>
+			</tr>
+		
+		</tbody>
+	</table>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+        <ul>
+            <li>
+                @Html.RouteLink("Add Entry", "entry_default", new { RegionName = Model.RegionName, AreaName= Model.AreaName,LocationName=Model.LocationName, Action = "Create" })
+            </li>
+            <li>
+                @Html.RouteLink("Edit Location", "location_default", new { RegionName = Model.RegionName, AreaName=Model.AreaName, LocationName=Model.LocationName, Action = "Edit" }, new { })
+            </li>
+            <li>
+                 @Html.RouteLink("Back To List", "area_default", new { RegionName = Model.RegionName, AreaName = Model.AreaName, Action = "Details" })            
+            </li>
+        </ul>
+</div>   
+    <div class="col-xs-12">
+        @Html.Partial("Entries", Model.Entries)
+    </div>
+
+</fieldset>

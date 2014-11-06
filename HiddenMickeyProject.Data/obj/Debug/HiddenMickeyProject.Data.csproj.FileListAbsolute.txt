@@ -18,4 +18,3 @@ E:\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Debug\MySql
 E:\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\obj\Debug\HiddenMickeyProject.Data.csprojResolveAssemblyReference.cache
 E:\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\obj\Debug\HiddenMickeyProject.Data.dll
 E:\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\obj\Debug\HiddenMickeyProject.Data.pdb
-D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\obj\Debug\HiddenMickeyProject.Data.csprojResolveAssemblyReference.cache

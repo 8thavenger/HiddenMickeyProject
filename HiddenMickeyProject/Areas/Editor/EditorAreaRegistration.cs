@@ -16,14 +16,19 @@ namespace HiddenMickeyProject.Areas.Editor
         {
 
             context.MapRoute(
+                "entry_default",
+                "Entry/{action}/{RegionName}/{AreaName}/{LocationName}/{EntryId}",
+                new { controller = "Entry", action = "Create", entryId = UrlParameter.Optional }
+            );
+            context.MapRoute(
                 "location_default",
                 "Location/{action}/{RegionName}/{AreaName}/{LocationName}",
-                new { controller = "Area", action = "Details", locationName = UrlParameter.Optional }
+                new { controller = "Location", action = "Create", locationName = UrlParameter.Optional }
             );
             context.MapRoute(
                 "area_default",
                 "Area/{action}/{RegionName}/{AreaName}",
-                new { controller = "Area", action = "Details", areaName=UrlParameter.Optional }
+                new { controller = "Area", action = "Create", areaName = UrlParameter.Optional }
             );
             context.MapRoute(
                 "region_default",

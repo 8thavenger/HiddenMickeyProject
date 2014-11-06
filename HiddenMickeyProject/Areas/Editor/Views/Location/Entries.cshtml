@@ -1,0 +1,37 @@
+﻿@model IEnumerable<HiddenMickeyProject.Models.EntryViewModel>
+<table>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Clue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hint)
+            </th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <ul>
+                        <li class="clue">
+                            @Html.DisplayFor(modelItem => item.Clue)
+                        </li>
+                        <li class="hint">
+                            @Html.DisplayFor(modelItem => item.Hint)
+                        </li>
+                    </ul>
+                </td>
+                <td>
+            @Html.RouteLink("Edit", "entry_default", new { RegionName = item.RegionName, AreaName=item.AreaName, LocationName=item.LocationName, EntryId=item.AreaName, Action = "Edit" }, new { }) |
+            @Html.RouteLink("Details", "entry_default", new { RegionName = item.RegionName, AreaName = item.AreaName, LocationName = item.LocationName, EntryId = item.AreaName, Action = "Details" }, new { })  |
+            @Html.RouteLink("Delete", "entry_default", new { RegionName = item.RegionName, AreaName = item.AreaName, LocationName = item.LocationName, EntryId = item.AreaName, Action = "Delete" }, new { })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

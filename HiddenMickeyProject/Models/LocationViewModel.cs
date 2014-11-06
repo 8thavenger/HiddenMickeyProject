@@ -9,7 +9,7 @@ namespace HiddenMickeyProject.Models
     {
         private string regionName = string.Empty;
         private string areaName = string.Empty;
-        private List<Data.Entry> entries = new List<Data.Entry>();
+        private List<Models.EntryViewModel> entries = new List<Models.EntryViewModel>();
 
         public string RegionName
         {
@@ -23,7 +23,7 @@ namespace HiddenMickeyProject.Models
             set { areaName = String.IsNullOrEmpty(value) ? string.Empty : value.Trim(); ; }
         }
 
-        public List<Data.Entry> Entries
+        public List<Models.EntryViewModel> Entries
         {
             get { return this.entries; }
         }

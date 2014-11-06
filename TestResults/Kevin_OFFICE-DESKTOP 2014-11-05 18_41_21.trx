@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="1a5aabd9-9c5f-4785-bf0b-3cda879b4468" name="Kevin@OFFICE-DESKTOP 2014-11-05 18:41:21" runUser="Office-Desktop\Kevin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="f540f6a2-4815-4dba-91ef-19b03ca7f34c">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment runDeploymentRoot="Kevin_OFFICE-DESKTOP 2014-11-05 18_41_21">
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Debug\HiddenMickeyProject.Data.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\dotless.1.4.1.0\lib\dotless.Core.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.WebPages.Razor.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\WebGrease.1.1.0\lib\WebGrease.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\MySql.Data.6.9.3\lib\net40\MySql.Data.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.Razor.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.WebPages.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\Microsoft.Web.Infrastructure.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.Helpers.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.WebPages.Deployment.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\Ninject.MVC4.3.2.1.0\lib\net40-full\Ninject.Web.Mvc.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\Ninject.Web.Common.3.2.0.0\lib\net40-full\Ninject.Web.Common.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Net.Http.WebRequest.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject\bin\HiddenMickeyProject.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\Ninject.3.2.0.0\lib\net40\Ninject.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll" />
+      <DeploymentItem filename="D:\Kevin\GitHub\HiddenMickeyProject\packages\MySql.Web.6.9.3\lib\net40\MySql.Web.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Net.Http.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific>
+        <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+          <AssemblyResolution>
+            <TestDirectory useLoadContext="true" />
+          </AssemblyResolution>
+        </UnitTestRunConfig>
+        <WebTestRunConfiguration testTypeId="4e7599fa-5ecb-43e9-a887-cd63cf72d207">
+          <Browser name="Internet Explorer 7.0">
+            <Headers>
+              <Header name="User-Agent" value="Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)" />
+              <Header name="Accept" value="*/*" />
+              <Header name="Accept-Language" value="{{$IEAcceptLanguage}}" />
+              <Header name="Accept-Encoding" value="GZIP" />
+            </Headers>
+          </Browser>
+        </WebTestRunConfiguration>
+      </TestTypeSpecific>
+      <AgentRule name="LocalMachineDefaultRole">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-11-05T18:41:21.1574699-05:00" queuing="2014-11-05T18:41:22.1035240-05:00" start="2014-11-05T18:41:22.1635275-05:00" finish="2014-11-05T18:41:28.9369149-05:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="15" executed="15" passed="15" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GivenNavigatorShowDeleteView" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="2eaa8788-cb2c-41ed-4ac7-a6f94226a354">
+      <Execution id="f0f18ff4-0d4b-4e38-9740-974ac29d0bc1" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.LocationControllerTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GivenNavigatorShowDeleteView" />
+    </UnitTest>
+    <UnitTest name="GetLocationsByAreaIdTest" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="0367fe5a-c6e0-4bea-ea42-4c910681d272">
+      <Execution id="b3b76d7f-4a06-4af2-9f16-fd202672345c" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.MysqlSourceTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetLocationsByAreaIdTest" />
+    </UnitTest>
+    <UnitTest name="GetRegionByIdTest" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="b017d611-ba81-c6fa-20f0-de0bf62fc559">
+      <Execution id="b2320413-6c75-446a-8c01-ad418f7234d5" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.MysqlSourceTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetRegionByIdTest" />
+    </UnitTest>
+    <UnitTest name="GetLocationByIdTest" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="415b8d9f-86d9-25ec-c8ec-0816994883ed">
+      <Execution id="04277e92-b60b-423a-94ce-571b67dd8d40" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.MysqlSourceTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetLocationByIdTest" />
+    </UnitTest>
+    <UnitTest name="GivenNavigatorShowCreateView" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="566422c3-9012-901c-1e76-f0408cd400c6">
+      <Execution id="4e5789bb-6ca1-4184-bfb2-b5d2a4d9a45b" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.LocationControllerTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GivenNavigatorShowCreateView" />
+    </UnitTest>
+    <UnitTest name="GetEntryByIdTest" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="95a5cb75-edc3-cf2d-ba16-596d68611e5c">
+      <Execution id="634def7d-3f43-4245-a30a-e22f31251e62" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.MysqlSourceTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetEntryByIdTest" />
+    </UnitTest>
+    <UnitTest name="GetAreasByRegionIdTest" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="a2ba2b3f-18b4-ff04-40cc-af30f1c0d65b">
+      <Execution id="733d18ca-b584-46a2-bfcf-c7bd16192d3a" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.MysqlSourceTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetAreasByRegionIdTest" />
+    </UnitTest>
+    <UnitTest name="GivenLocationViewModelUpdateLocation" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="a7f45d94-5281-26ed-d570-4f5f4db79135">
+      <Execution id="ffad177f-4fac-46ce-92ea-0646bb926658" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.LocationControllerTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GivenLocationViewModelUpdateLocation" />
+    </UnitTest>
+    <UnitTest name="GetEntriesByLocationIdTest" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="1b2b2782-da3b-8fe0-5da6-022c49e07f31">
+      <Execution id="060d03c6-339c-4c34-932b-369745bb1d77" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.MysqlSourceTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetEntriesByLocationIdTest" />
+    </UnitTest>
+    <UnitTest name="GivenLocationViewModelShowDetailView" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="dbd7c734-4df5-6509-499b-00dddbab98a1">
+      <Execution id="54095bf6-a09a-49cc-8a08-1bd3b6021446" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.LocationControllerTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GivenLocationViewModelShowDetailView" />
+    </UnitTest>
+    <UnitTest name="RegionsTest" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="3a921523-e237-e44f-0fb7-1eba18fb4d2c">
+      <Execution id="5d3ef8e2-86e3-4108-ac94-fb62739f9195" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.MysqlSourceTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="RegionsTest" />
+    </UnitTest>
+    <UnitTest name="GivenLocationViewModelDeleteLocation" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="379cd174-4fd5-7e56-d7d7-275645ab1906">
+      <Execution id="4ff248d7-3f81-4472-af8a-7d981b67d564" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.LocationControllerTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GivenLocationViewModelDeleteLocation" />
+    </UnitTest>
+    <UnitTest name="GetAreaByIdTest" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="4bc76dca-af83-9ff5-5773-130114c7d74c">
+      <Execution id="e04fffc8-a846-4984-b98d-92fdd352a499" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.MysqlSourceTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetAreaByIdTest" />
+    </UnitTest>
+    <UnitTest name="GivenNavigatorShowEditView" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="fa94d8e0-5a76-23dd-0e7d-0b9fa7c4fd83">
+      <Execution id="683e4946-f3dc-45f0-9cff-1607927310c7" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.LocationControllerTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GivenNavigatorShowEditView" />
+    </UnitTest>
+    <UnitTest name="GivenLocationViewModelCreateNewLocation" storage="d:\kevin\github\hiddenmickeyproject\hiddenmickeyproject.tests\bin\debug\hiddenmickeyproject.tests.dll" id="03e94dfa-2be6-c8b6-31c4-a7100364d7ae">
+      <Execution id="ab49dde5-0a08-40b4-b531-282c2871292f" />
+      <TestMethod codeBase="D:/Kevin/GitHub/HiddenMickeyProject/HiddenMickeyProject.Tests/bin/Debug/HiddenMickeyProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="HiddenMickeyProject.Tests.LocationControllerTest, HiddenMickeyProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GivenLocationViewModelCreateNewLocation" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0367fe5a-c6e0-4bea-ea42-4c910681d272" executionId="b3b76d7f-4a06-4af2-9f16-fd202672345c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="03e94dfa-2be6-c8b6-31c4-a7100364d7ae" executionId="ab49dde5-0a08-40b4-b531-282c2871292f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1b2b2782-da3b-8fe0-5da6-022c49e07f31" executionId="060d03c6-339c-4c34-932b-369745bb1d77" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2eaa8788-cb2c-41ed-4ac7-a6f94226a354" executionId="f0f18ff4-0d4b-4e38-9740-974ac29d0bc1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="379cd174-4fd5-7e56-d7d7-275645ab1906" executionId="4ff248d7-3f81-4472-af8a-7d981b67d564" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3a921523-e237-e44f-0fb7-1eba18fb4d2c" executionId="5d3ef8e2-86e3-4108-ac94-fb62739f9195" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="415b8d9f-86d9-25ec-c8ec-0816994883ed" executionId="04277e92-b60b-423a-94ce-571b67dd8d40" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4bc76dca-af83-9ff5-5773-130114c7d74c" executionId="e04fffc8-a846-4984-b98d-92fdd352a499" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="566422c3-9012-901c-1e76-f0408cd400c6" executionId="4e5789bb-6ca1-4184-bfb2-b5d2a4d9a45b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="95a5cb75-edc3-cf2d-ba16-596d68611e5c" executionId="634def7d-3f43-4245-a30a-e22f31251e62" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a2ba2b3f-18b4-ff04-40cc-af30f1c0d65b" executionId="733d18ca-b584-46a2-bfcf-c7bd16192d3a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a7f45d94-5281-26ed-d570-4f5f4db79135" executionId="ffad177f-4fac-46ce-92ea-0646bb926658" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b017d611-ba81-c6fa-20f0-de0bf62fc559" executionId="b2320413-6c75-446a-8c01-ad418f7234d5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dbd7c734-4df5-6509-499b-00dddbab98a1" executionId="54095bf6-a09a-49cc-8a08-1bd3b6021446" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fa94d8e0-5a76-23dd-0e7d-0b9fa7c4fd83" executionId="683e4946-f3dc-45f0-9cff-1607927310c7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="b3b76d7f-4a06-4af2-9f16-fd202672345c" testId="0367fe5a-c6e0-4bea-ea42-4c910681d272" testName="GetLocationsByAreaIdTest" computerName="OFFICE-DESKTOP" duration="00:00:02.2854750" startTime="2014-11-05T18:41:22.1635275-05:00" endTime="2014-11-05T18:41:24.8626819-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b3b76d7f-4a06-4af2-9f16-fd202672345c">
+    </UnitTestResult>
+    <UnitTestResult executionId="ab49dde5-0a08-40b4-b531-282c2871292f" testId="03e94dfa-2be6-c8b6-31c4-a7100364d7ae" testName="GivenLocationViewModelCreateNewLocation" computerName="OFFICE-DESKTOP" duration="00:00:00.2536181" startTime="2014-11-05T18:41:24.8696823-05:00" endTime="2014-11-05T18:41:25.1276970-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ab49dde5-0a08-40b4-b531-282c2871292f">
+    </UnitTestResult>
+    <UnitTestResult executionId="060d03c6-339c-4c34-932b-369745bb1d77" testId="1b2b2782-da3b-8fe0-5da6-022c49e07f31" testName="GetEntriesByLocationIdTest" computerName="OFFICE-DESKTOP" duration="00:00:00.5172711" startTime="2014-11-05T18:41:25.1336974-05:00" endTime="2014-11-05T18:41:25.6557272-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="060d03c6-339c-4c34-932b-369745bb1d77">
+    </UnitTestResult>
+    <UnitTestResult executionId="f0f18ff4-0d4b-4e38-9740-974ac29d0bc1" testId="2eaa8788-cb2c-41ed-4ac7-a6f94226a354" testName="GivenNavigatorShowDeleteView" computerName="OFFICE-DESKTOP" duration="00:00:00.0030016" startTime="2014-11-05T18:41:25.6597274-05:00" endTime="2014-11-05T18:41:25.6677279-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f0f18ff4-0d4b-4e38-9740-974ac29d0bc1">
+    </UnitTestResult>
+    <UnitTestResult executionId="4ff248d7-3f81-4472-af8a-7d981b67d564" testId="379cd174-4fd5-7e56-d7d7-275645ab1906" testName="GivenLocationViewModelDeleteLocation" computerName="OFFICE-DESKTOP" duration="00:00:00.0022661" startTime="2014-11-05T18:41:25.6707281-05:00" endTime="2014-11-05T18:41:25.6767284-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4ff248d7-3f81-4472-af8a-7d981b67d564">
+    </UnitTestResult>
+    <UnitTestResult executionId="5d3ef8e2-86e3-4108-ac94-fb62739f9195" testId="3a921523-e237-e44f-0fb7-1eba18fb4d2c" testName="RegionsTest" computerName="OFFICE-DESKTOP" duration="00:00:00.4675699" startTime="2014-11-05T18:41:25.6797286-05:00" endTime="2014-11-05T18:41:26.1507555-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5d3ef8e2-86e3-4108-ac94-fb62739f9195">
+    </UnitTestResult>
+    <UnitTestResult executionId="04277e92-b60b-423a-94ce-571b67dd8d40" testId="415b8d9f-86d9-25ec-c8ec-0816994883ed" testName="GetLocationByIdTest" computerName="OFFICE-DESKTOP" duration="00:00:00.5061950" startTime="2014-11-05T18:41:26.1527556-05:00" endTime="2014-11-05T18:41:26.6657850-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="04277e92-b60b-423a-94ce-571b67dd8d40">
+    </UnitTestResult>
+    <UnitTestResult executionId="e04fffc8-a846-4984-b98d-92fdd352a499" testId="4bc76dca-af83-9ff5-5773-130114c7d74c" testName="GetAreaByIdTest" computerName="OFFICE-DESKTOP" duration="00:00:00.5412547" startTime="2014-11-05T18:41:26.6707853-05:00" endTime="2014-11-05T18:41:27.2208167-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e04fffc8-a846-4984-b98d-92fdd352a499">
+    </UnitTestResult>
+    <UnitTestResult executionId="4e5789bb-6ca1-4184-bfb2-b5d2a4d9a45b" testId="566422c3-9012-901c-1e76-f0408cd400c6" testName="GivenNavigatorShowCreateView" computerName="OFFICE-DESKTOP" duration="00:00:00.0006052" startTime="2014-11-05T18:41:27.2238169-05:00" endTime="2014-11-05T18:41:27.2298172-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4e5789bb-6ca1-4184-bfb2-b5d2a4d9a45b">
+    </UnitTestResult>
+    <UnitTestResult executionId="634def7d-3f43-4245-a30a-e22f31251e62" testId="95a5cb75-edc3-cf2d-ba16-596d68611e5c" testName="GetEntryByIdTest" computerName="OFFICE-DESKTOP" duration="00:00:00.5283563" startTime="2014-11-05T18:41:27.2308173-05:00" endTime="2014-11-05T18:41:27.7668480-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="634def7d-3f43-4245-a30a-e22f31251e62">
+    </UnitTestResult>
+    <UnitTestResult executionId="733d18ca-b584-46a2-bfcf-c7bd16192d3a" testId="a2ba2b3f-18b4-ff04-40cc-af30f1c0d65b" testName="GetAreasByRegionIdTest" computerName="OFFICE-DESKTOP" duration="00:00:00.4867508" startTime="2014-11-05T18:41:27.7728483-05:00" endTime="2014-11-05T18:41:28.2648764-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="733d18ca-b584-46a2-bfcf-c7bd16192d3a">
+    </UnitTestResult>
+    <UnitTestResult executionId="ffad177f-4fac-46ce-92ea-0646bb926658" testId="a7f45d94-5281-26ed-d570-4f5f4db79135" testName="GivenLocationViewModelUpdateLocation" computerName="OFFICE-DESKTOP" duration="00:00:00.0031123" startTime="2014-11-05T18:41:28.2688767-05:00" endTime="2014-11-05T18:41:28.2758771-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ffad177f-4fac-46ce-92ea-0646bb926658">
+    </UnitTestResult>
+    <UnitTestResult executionId="b2320413-6c75-446a-8c01-ad418f7234d5" testId="b017d611-ba81-c6fa-20f0-de0bf62fc559" testName="GetRegionByIdTest" computerName="OFFICE-DESKTOP" duration="00:00:00.5339977" startTime="2014-11-05T18:41:28.2778772-05:00" endTime="2014-11-05T18:41:28.8159080-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b2320413-6c75-446a-8c01-ad418f7234d5">
+    </UnitTestResult>
+    <UnitTestResult executionId="54095bf6-a09a-49cc-8a08-1bd3b6021446" testId="dbd7c734-4df5-6509-499b-00dddbab98a1" testName="GivenLocationViewModelShowDetailView" computerName="OFFICE-DESKTOP" duration="00:00:00.0006422" startTime="2014-11-05T18:41:28.8239084-05:00" endTime="2014-11-05T18:41:28.8299088-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="54095bf6-a09a-49cc-8a08-1bd3b6021446">
+    </UnitTestResult>
+    <UnitTestResult executionId="683e4946-f3dc-45f0-9cff-1607927310c7" testId="fa94d8e0-5a76-23dd-0e7d-0b9fa7c4fd83" testName="GivenNavigatorShowEditView" computerName="OFFICE-DESKTOP" duration="00:00:00.0006876" startTime="2014-11-05T18:41:28.8329089-05:00" endTime="2014-11-05T18:41:28.8379092-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="683e4946-f3dc-45f0-9cff-1607927310c7">
+    </UnitTestResult>
+  </Results>
+</TestRun>

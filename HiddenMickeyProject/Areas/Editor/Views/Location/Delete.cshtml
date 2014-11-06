@@ -1,0 +1,59 @@
+﻿@model HiddenMickeyProject.Models.LocationViewModel
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>
+    Delete</h2>
+<h3>
+    Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Location</legend>
+    <div class="col-xs-12 col-sm-6">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        Region Name
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.RegionName)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Area Name
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.AreaName)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Location Name
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.LocationName)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <ul>
+            <li>
+                @Html.RouteLink("Back To List", "area_default", new { RegionName = Model.RegionName, AreaName = Model.AreaName, Action = "Details" })
+            </li>
+            <li>
+                @using (Html.BeginForm())
+                {
+                    @Html.HiddenFor(model => model.LocationId);
+                    @Html.HiddenFor(model => model.AreaId);
+                    @Html.HiddenFor(model => model.AreaName);
+                    @Html.HiddenFor(model => model.RegionName);
+                    <input type="submit" value="Delete" />
+                }
+            </li>
+        </ul>
+    </div>
+</fieldset>

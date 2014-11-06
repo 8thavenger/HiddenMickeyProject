@@ -1,0 +1,118 @@
+﻿@highlight:#ff0000;
+@link-color:#F5B800;
+@background-color:#000000;
+@font-color:#FFFFFF;
+@button-color:#017890;
+
+.header{
+	text-align:center;
+	max-width:1200px;
+    background-repeat: no-repeat;
+	background-position:center top;
+}
+
+html{
+	background-color:@button-color;
+	background-image:url('../Images/MickeyTile.gif');
+}
+
+body
+{
+	max-width:1200px;
+	height:100%;
+	margin:auto;
+	background-color:@background-color;
+	color:@font-color;
+	padding:1em;
+}
+
+footer{
+	text-align:right;
+	font-size:0.5em;
+	clear:both;
+}
+
+a{
+	color:@link-color;
+}
+
+input
+{
+    background-color:@font-color;
+    color:@background-color;
+	margin:0.25em;
+}
+
+table
+{ 
+	border:1px solid @highlight;
+    margin:1em;
+	thead{
+		tr{
+			background-color:@highlight;
+			th{
+				font-weight:bold;
+				text-align:center;
+				color:@background-color;
+			}
+		}
+	}
+    tbody{
+        tr
+        {
+            td
+            {
+                padding-left:0.5em;
+                padding-right:0.5em;
+            }
+        }
+    }
+}
+
+a:hover{
+	color:lighten(@link-color,5%);
+}
+
+a:visited{
+	color:darken(@link-color,5%);
+}
+
+a:active{
+	color:@font-color;
+}
+
+.scrollable{
+	height:500px;
+	overflow:auto;
+	
+	article{
+	border:medium inset @highlight;
+	padding:1em;
+	margin:1em;
+    } 
+}
+
+.nav-pills > li.active >a{
+background-color:lighten(@button-color,25);
+color:@font-color;
+}
+
+.nav-pills > li>a:hover{
+background-color:@button-color;
+color:@font-color;
+}
+
+.nav-tabs > li.active >a{
+background-color:lighten(@button-color,2%);
+color:@font-color;
+}
+
+.nav-tabs > li>a:hover{
+background-color:@button-color;
+color:@background-color;
+}
+
+@import "Phone.less";
+@import "Tablet.less";
+@import "Computer.less";
+@import "LargeScreen.less";

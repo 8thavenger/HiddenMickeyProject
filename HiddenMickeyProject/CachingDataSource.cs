@@ -146,7 +146,7 @@ namespace HiddenMickeyProject
             if (this.repository.SaveLocation(location))
             {
                 List<Location> locations = this.GetLocationsByAreaId(location.AreaId).ToList();
-                Location current = locations.DefaultIfEmpty(null).First(l => l.LocationId == location.LocationId);
+                Location current = locations.FirstOrDefault(l => l.LocationId == location.LocationId);
                 if (current != null)
                     locations.Remove(current);
                 locations.Add(location);
@@ -193,7 +193,7 @@ namespace HiddenMickeyProject
             if (this.repository.DeleteLocation(location))
             {
                 List<Location> locations = this.GetLocationsByAreaId(location.AreaId).ToList();
-                Location current = locations.DefaultIfEmpty(null).First(l => l.LocationId == location.LocationId);
+                Location current = locations.FirstOrDefault(l => l.LocationId == location.LocationId);
                 if (current != null)
                     locations.Remove(current);
                 string key = string.Format(LOCATION_KEY, location.AreaId);

@@ -30,10 +30,19 @@
         </table>
     </div>
     <div class="col-xs-12 col-sm-6">
-        @Html.ActionLink("Edit", "Edit", new { id = Model.AreaId }) |
-        @Html.ActionLink("Back to List", "Index")
+        <ul>
+            <li>
+                @Html.RouteLink("Create Location", "location_default", new { RegionName = Model.RegionName, AreaName=Model.AreaName, Action = "Create" }, new { })
+            </li>
+            <li>
+                @Html.RouteLink("Edit", "area_default", new { RegionName = Model.RegionName, AreaName=Model.AreaName, Action = "Edit" }, new { })
+            </li>
+            <li>
+                @Html.RouteLink("Back to List", "region_default", new { RegionName = Model.RegionName, Action = "Details" }, new { })
+            </li>
+        </ul>
     </div>
 </fieldset>
 <div>
-    Locato
+    @Html.Partial("Locations", Model.Locations)
 </div>

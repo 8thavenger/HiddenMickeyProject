@@ -1,8 +1,4 @@
 ﻿@model IEnumerable<HiddenMickeyProject.Models.LocationViewModel>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table>
 	<thead>
     <tr>
@@ -19,9 +15,9 @@
             @Html.DisplayFor(modelItem => item.LocationName)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.LocationId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.LocationId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.LocationId })
+            @Html.RouteLink("Edit", "location_default", new { RegionName = item.RegionName, AreaName=item.AreaName, LocationName=item.LocationName, Action = "Edit" }, new { }) |
+            @Html.RouteLink("Details", "location_default", new { RegionName = item.RegionName, AreaName = item.AreaName, LocationName = item.LocationName, Action = "Details" }, new { })  |
+            @Html.RouteLink("Delete", "location_default", new { RegionName = item.RegionName, AreaName = item.AreaName, LocationName = item.LocationName, Action = "Delete" }, new { })
         </td>
     </tr>
 }

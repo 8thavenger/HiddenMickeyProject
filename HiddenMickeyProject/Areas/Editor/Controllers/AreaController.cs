@@ -42,7 +42,8 @@ namespace HiddenMickeyProject.Areas.Editor.Controllers
         [HttpGet]
         public ViewResult Details(Navigator navigator)
         {
-            return View("Details",navigator);
+            AreaViewModel model = Utilities.ObjectFactory.CreateArea(navigator);
+            return View("Details",model);
         }
 
         [HttpGet]

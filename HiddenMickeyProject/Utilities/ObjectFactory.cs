@@ -30,7 +30,7 @@ namespace HiddenMickeyProject.Utilities
             location.LocationName = navigator.LocationName;
             location.AreaName = navigator.AreaName;
             location.RegionName = navigator.RegionName;
-            location.Entries.AddRange(navigator.Entries);
+            location.Entries.AddRange(navigator.Entries.Select(entry => new EntryViewModel() { Clue = entry.Clue, Hint = entry.Hint, LocationId = entry.LocationId, EntryId = entry.EntryId, AreaName = location.AreaName, LocationName = location.LocationName, RegionName = location.RegionName }));
             return location;
         }
 

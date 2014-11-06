@@ -9,7 +9,7 @@ namespace HiddenMickeyProject.Models
     public class AreaViewModel:Data.Area
     {
         private string regionName = string.Empty;
-        private List<Location> locations = new List<Location>();
+        private List<LocationViewModel> locations = new List<LocationViewModel>();
 
         public string RegionName
         {
@@ -17,7 +17,7 @@ namespace HiddenMickeyProject.Models
             set { regionName = String.IsNullOrEmpty(value) ? String.Empty : value.Trim(); ; }
         }
 
-        public List<Location> Locations
+        public List<LocationViewModel> Locations
         {
             get { return this.locations; }
         }

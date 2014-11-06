@@ -1,0 +1,65 @@
+﻿@model HiddenMickeyProject.Models.LocationViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Create Location</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.LocationId)
+    @Html.HiddenFor(model => model.AreaId)
+    @Html.HiddenFor(model => model.AreaName)
+    @Html.HiddenFor(model => model.RegionName)
+    <fieldset>
+        <legend>Edit Location</legend>
+        <div class="col-xs-12 col-sm-6">
+            <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                <tbody>
+                    <tr>
+                        <td>
+                            Region Name
+                        </td>
+                        <td>
+                            @Html.LabelFor(model => model.RegionName)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Area Name
+                        </td>
+                        <td>
+                            @Html.LabelFor(model => model.AreaName)
+                        </td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td>
+                            Location Name
+                        </td>
+                        <td>
+                            @Html.EditorFor(model => model.LocationName)
+                            @Html.ValidationMessageFor(model => model.LocationName)
+                        </td>
+                    </tr>
+                    <tbody>
+            </table>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <ul>
+                <li>
+                    @Html.RouteLink("Add Entry", "entry_default", new { RegionName = Model.RegionName, AreaName= Model.AreaName,LocationName=Model.LocationName, Action = "Create" })
+                </li>
+                <li>
+                    <input type="submit" value="Update Location" />
+                </li>
+            </ul>
+        </div>
+    </fieldset>    
+    <div class="col-xs-12">
+        @Html.Partial("Entries", Model.Entries)
+    </div>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
