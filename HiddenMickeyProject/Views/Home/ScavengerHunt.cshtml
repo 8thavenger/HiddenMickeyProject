@@ -37,38 +37,17 @@
 </nav>
 <div class="scrollable col-sm-12 col-md-10">
 	Tap hint to see clue
+    @foreach (Entry entry in Model.Entries)
+    {
 	<article>
-		<div class="hint">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		</div>
 		<div class="clue">
-			Nulla vitae ante fermentum, mollis tortor id, imperdiet justo.
+			@entry.Clue
+		</div>
+		<div class="hint">
+			@entry.Hint
 		</div>
 	</article>
-	<article>
-		<div class="hint">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		</div>
-		<div class="clue">
-			Nulla vitae ante fermentum, mollis tortor id, imperdiet justo.
-		</div>
-	</article>
-	<article>
-		<div class="hint">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		</div>
-		<div class="clue">
-			Nulla vitae ante fermentum, mollis tortor id, imperdiet justo.
-		</div>
-	</article>
-	<article>
-		<div class="hint">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		</div>
-		<div class="clue">
-			Nulla vitae ante fermentum, mollis tortor id, imperdiet justo.
-		</div>
-	</article>
+    }
 </div>
 @section scripts{
 <script type="text/javascript">
@@ -76,9 +55,9 @@
 				$('.scrollable article').each(function(){
 					var clue = $(this).find('.clue');
 					var hint = $(this).find('.hint');
-					clue.css('display','none');
-					hint.bind('click',function(){
-						clue.slideToggle();
+					hint.css('display','none');
+					clue.bind('click',function(){
+						hint.slideToggle();
 					});					
 				});
 			});	

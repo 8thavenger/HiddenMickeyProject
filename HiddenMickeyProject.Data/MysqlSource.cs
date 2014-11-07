@@ -369,8 +369,8 @@ namespace HiddenMickeyProject.Data
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("Location_Id", MySqlDbType.Int32).Value = entry.LocationId;
-                cmd.Parameters.Add("Hint", MySqlDbType.VarChar, 8000).Value = entry.Hint;
-                cmd.Parameters.Add("Clue", MySqlDbType.VarChar, 8000).Value = entry.Clue;
+                cmd.Parameters.Add("Hint_Text", MySqlDbType.VarChar, 8000).Value = entry.Hint;
+                cmd.Parameters.Add("Clue_Text", MySqlDbType.VarChar, 8000).Value = entry.Clue;
                 cn.Open();
                 entry.EntryId = Convert.ToInt32(cmd.ExecuteScalar());
                 cn.Close();
@@ -416,8 +416,8 @@ namespace HiddenMickeyProject.Data
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("Entry_Id", MySqlDbType.Int32).Value = entry.EntryId;
                 cmd.Parameters.Add("Location_Id", MySqlDbType.Int32).Value = entry.LocationId;
-                cmd.Parameters.Add("Hint", MySqlDbType.VarChar, 8000).Value = entry.Hint;
-                cmd.Parameters.Add("Clue", MySqlDbType.VarChar, 8000).Value = entry.Clue;
+                cmd.Parameters.Add("Hint_Text", MySqlDbType.VarChar, 8000).Value = entry.Hint;
+                cmd.Parameters.Add("Clue_Text", MySqlDbType.VarChar, 8000).Value = entry.Clue;
                 cn.Open();
                 rows = cmd.ExecuteNonQuery();
                 cn.Close();
@@ -428,7 +428,7 @@ namespace HiddenMickeyProject.Data
         private bool UpdateLocation(Location location, MySqlConnection cn)
         {
             int rows = 0;
-            using (MySqlCommand cmd = new MySqlCommand("Updateocation", cn))
+            using (MySqlCommand cmd = new MySqlCommand("UpdateLocation", cn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("Area_Id", MySqlDbType.Int32).Value = location.AreaId;

@@ -4,3 +4,10 @@ E:\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Release\Hid
 E:\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Release\MySql.Data.dll
 E:\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\obj\Release\HiddenMickeyProject.Data.dll
 E:\Documents\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\obj\Release\HiddenMickeyProject.Data.pdb
+D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Release\HiddenMickeyProject.Data.dll.config
+D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Release\HiddenMickeyProject.Data.dll
+D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Release\HiddenMickeyProject.Data.pdb
+D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\bin\Release\MySql.Data.dll
+D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\obj\Release\HiddenMickeyProject.Data.csprojResolveAssemblyReference.cache
+D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\obj\Release\HiddenMickeyProject.Data.dll
+D:\Kevin\GitHub\HiddenMickeyProject\HiddenMickeyProject.Data\obj\Release\HiddenMickeyProject.Data.pdb

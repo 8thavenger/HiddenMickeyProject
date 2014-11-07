@@ -3,10 +3,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Clue)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Hint)
+                Clue/Hint
             </th>
             <th>
             </th>
@@ -27,9 +24,9 @@
                     </ul>
                 </td>
                 <td>
-            @Html.RouteLink("Edit", "entry_default", new { RegionName = item.RegionName, AreaName=item.AreaName, LocationName=item.LocationName, EntryId=item.AreaName, Action = "Edit" }, new { }) |
-            @Html.RouteLink("Details", "entry_default", new { RegionName = item.RegionName, AreaName = item.AreaName, LocationName = item.LocationName, EntryId = item.AreaName, Action = "Details" }, new { })  |
-            @Html.RouteLink("Delete", "entry_default", new { RegionName = item.RegionName, AreaName = item.AreaName, LocationName = item.LocationName, EntryId = item.AreaName, Action = "Delete" }, new { })
+                    @Html.RouteLink("Edit", "entry_default", new { RegionName = item.RegionName, AreaName=item.AreaName, LocationName=item.LocationName, EntryId=item.EntryId, Action = "Edit" }, new { }) |
+                    @Html.RouteLink("Details", "entry_default", new { RegionName = item.RegionName, AreaName = item.AreaName, LocationName = item.LocationName, EntryId = item.EntryId, Action = "Details" }, new { })  |
+                    @Html.RouteLink("Delete", "entry_default", new { RegionName = item.RegionName, AreaName = item.AreaName, LocationName = item.LocationName, EntryId = item.EntryId, Action = "Delete" }, new { })
                 </td>
             </tr>
         }
