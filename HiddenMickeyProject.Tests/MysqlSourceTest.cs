@@ -13,6 +13,7 @@ namespace HiddenMickeyProject.Tests
     ///to contain all MysqlSourceTest Unit Tests
     ///</summary>
     [TestClass()]
+    [Ignore]
     public class MysqlSourceTest
     {
         private const string CONNECTION_STRING = "server=519c8110-1102-4817-a396-a3af017a9c00.mysql.sequelizer.com;database=db519c811011024817a396a3af017a9c00;uid=zhnubynhfntiilzz;pwd=mZ5o3gZCaNyzMFmWedTitPwiMxTfh5nhnau5kiApUWJo4G4S6HSHpgSDBUHCuUvd";

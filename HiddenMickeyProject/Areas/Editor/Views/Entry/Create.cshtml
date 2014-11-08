@@ -44,20 +44,20 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td style="vertical-align:top">
                             @Html.LabelFor(model => model.Clue)
                         </td>
                         <td>
-                            @Html.TextAreaFor(model => model.Clue)
+                            @Html.TextAreaFor(model => model.Clue,new {@class="clue"})
                             @Html.ValidationMessageFor(model => model.Clue)
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td style="vertical-align:top">
                             @Html.LabelFor(model => model.Hint)
                         </td>
                         <td>
-                            @Html.TextAreaFor(model => model.Hint)
+                            @Html.TextAreaFor(model => model.Hint, new { @class="hint" })
                             @Html.ValidationMessageFor(model => model.Hint)
                         </td>
                     </tr>
