@@ -98,7 +98,8 @@ namespace HiddenMickeyProject.Utilities
             {
                 repository = new Data.XmlSource(reader);
             }
-            return new CachingRepository(repository);
+            //return new CachingRepository(repository);
+            return repository;
 #else
             string connection = ConfigurationManager.ConnectionStrings["LocalMySqlServer"].ConnectionString;
             return new CachingRepository(new Data.MysqlSource(connection));
